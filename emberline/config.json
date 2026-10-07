@@ -1,0 +1,17 @@
+{
+  "ads_enabled": true,
+  "ad_daily_cap": 5,
+  "ad_rv_double_cap": 3,
+  "ad_try_on_cap": 1,
+  "ad_patrol_cap": 1,
+  "ad_min_interval_s": 60,
+  "ad_break_results_cap": 4,
+  "ad_break_every": 3,
+  "ad_break_resume_cap": 2,
+  "ad_break_gap_s": 240,
+  "ad_banner_on": 1,
+  "econ_station_seed_scale": 1.0,
+  "econ_pinecone_seeds": 12,
+  "econ_replay_daily_cap": 120,
+  "econ_upgrade_cost_scale": 1.0
+}
