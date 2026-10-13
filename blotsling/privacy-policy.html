@@ -1,0 +1,106 @@
+<!doctype html>
+<!--
+  Blotsling: Fling the Legion — privacy policy (GDD §47; 13+, General Audience, not Designed for Families).
+  Publish as https://taninteractive.github.io/blotsling/privacy-policy.html (APP_CONFIG.privacyUrl in
+  src/config/appConfig.ts; the same URL goes into Play Console and the AdMob privacy messages).
+  Keep in sync with the Data safety answers in docs/STORE-LISTING.md, src/meta/adPolicy.ts (ad rules and
+  daily caps), src/meta/chests.ts (drop rates, pity), src/meta/skus.ts (products) and the merged manifest.
+-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Blotsling Privacy Policy</title>
+  <meta name="description" content="Privacy policy of Blotsling: Fling the Legion, a game by Tan Interactive.">
+  <style>
+    :root { --ink: #1c2340; --paper: #f8ecd2; --accent: #b63a32; --rule: #d9c3a3; }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--paper); color: var(--ink); font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+    main { max-width: 760px; margin: 0 auto; padding: 24px 16px 64px; }
+    h1 { font-size: 1.6rem; line-height: 1.25; margin: 0 0 4px; }
+    h2 { font-size: 1.15rem; margin-top: 2rem; border-bottom: 2px solid var(--accent); padding-bottom: 2px; }
+    p, li { overflow-wrap: anywhere; }
+    .muted { opacity: .75; font-size: .9rem; }
+    .table { overflow-x: auto; }
+    table { border-collapse: collapse; width: 100%; font-size: .95rem; }
+    th, td { border: 1px solid var(--rule); padding: 6px 8px; text-align: left; vertical-align: top; }
+    th { background: rgba(182, 58, 50, .08); }
+    a { color: var(--accent); }
+  </style>
+</head>
+<body>
+<main>
+  <h1>Blotsling: Fling the Legion — Privacy Policy</h1>
+  <p class="muted">Tan Interactive · Effective 13 October 2026 · App id <code>com.taninteractive.blotsling</code></p>
+
+  <p>Blotsling is a game for players aged 13 and over. It is not directed at children under 13. This page explains what data the game and the Google services it uses handle, why, and the choices you have.</p>
+
+  <h2>What the game itself collects</h2>
+  <ul>
+    <li>No account, no login, no names, no chat, no free-text input, no contacts, photos, microphone, camera or precise location.</li>
+    <li>Your progress (leaves won, stars, the Scrivener's Kit, Inkdrops, Gilt Seals, Nib Shards, Daily Orders, Muster Week, settings) is saved only on your device. Uninstalling the game or clearing its storage erases it. One-time purchases can be restored from Google Play (Settings → Restore purchases).</li>
+    <li>We run no servers of our own and keep no database about players.</li>
+  </ul>
+
+  <h2>Analytics and remote settings (Google Firebase)</h2>
+  <ul>
+    <li><strong>Firebase Analytics</strong> counts game events, for example "leaf started", "leaf finished", "chest opened", "Daily Order done", "rewarded ad watched" and in-game currency earned or spent, so we can balance and improve the game. Events never contain names or anything you type. When the game hits an error it sends only where it happened (no message, no stack trace). Firebase uses an app-instance identifier and may derive an approximate location (country, region) from your IP address.</li>
+    <li>Analytics data is never used for advertising: the game turns Firebase's advertising signals off and does not request the Android Advertising ID (the permission is removed from the app).</li>
+    <li>Analytics event data is kept for at most 14 months.</li>
+    <li><strong>Firebase Remote Config</strong> downloads game settings (for example how often ads may appear, daily caps and reward sizes) so we can tune the game without an update. It never changes the rules of a level.</li>
+    <li>Crash reports, if any, come from Android itself (Android vitals in Google Play), under Google's policies.</li>
+  </ul>
+
+  <h2>Ads (Google AdMob)</h2>
+  <ul>
+    <li><strong>Rewarded ads are always your choice</strong>: Double Ink after a won leaf, Second Stand after a lost one, Ink Boost before a leaf, a free Courier's Pouch, new shop offers and a Daily Leaf retry. Each has a daily limit, and the button only appears when an ad is ready.</li>
+    <li><strong>Full-screen ads between leaves</strong> only appear from Chapter 2, only after a won leaf, at most every third win and at least 3 minutes apart. Never during play, never after a lost leaf and never before a story scene. Any purchase in the game turns them off for good.</li>
+    <li>There are no banner ads. Ad content is limited to Teen or lower.</li>
+    <li>AdMob may use device identifiers (such as the app set ID), approximate location from the IP address, and diagnostic and ad-interaction data to show, limit, measure and protect ads from fraud. How Google uses data from apps: <a href="https://policies.google.com/technologies/partner-sites">policies.google.com/technologies/partner-sites</a>.</li>
+  </ul>
+
+  <h2>Your consent choices (EEA, UK, Switzerland and US states)</h2>
+  <ul>
+    <li>In the European Economic Area, the United Kingdom and Switzerland, Google's consent message is shown before any ad is requested. You can consent, refuse, or choose purpose by purpose. If you refuse, the game still plays, with limited, non-personalised ads.</li>
+    <li>In US states with consumer privacy laws, Google's message lets you opt out of the "sale" or "sharing" of personal information and of targeted advertising.</li>
+    <li>You can change your choice at any time: Settings → Ad privacy choices (shown wherever your region has such a form).</li>
+  </ul>
+
+  <h2>Purchases</h2>
+  <ul>
+    <li>Purchases go through Google Play. We never receive your payment details; Google Play keeps your purchase history.</li>
+    <li>The Courier's Pouch, the Iron Coffer and the Gilt Reliquary contain random items. Their drop rates are printed on each chest, the Gilt Reliquary shows its guaranteed-rarity counter ("Epic in ≤ n, Legendary in ≤ m"), and every item can also be crafted with Nib Shards earned in play.</li>
+  </ul>
+
+  <h2>For residents of US states (CCPA/CPRA and similar laws)</h2>
+  <div class="table">
+    <table>
+      <thead><tr><th>Category</th><th>Example</th><th>Received by</th></tr></thead>
+      <tbody>
+        <tr><td>Identifiers</td><td>Firebase app-instance ID, app set ID</td><td>Google (Firebase, AdMob)</td></tr>
+        <tr><td>Internet or other electronic activity</td><td>Game events, ad views and taps</td><td>Google (Firebase, AdMob)</td></tr>
+        <tr><td>Approximate geolocation</td><td>Country or region from the IP address</td><td>Google (Firebase, AdMob)</td></tr>
+        <tr><td>Commercial information</td><td>Purchase history</td><td>Google Play</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>We do not sell personal information for money. Letting AdMob use identifiers for targeted advertising may count as "sharing" or "sale" under some state laws; you can opt out in Settings → Ad privacy choices.</p>
+
+  <h2>Your rights and data deletion</h2>
+  <ul>
+    <li>Data on your device: uninstall the game or clear its storage.</li>
+    <li>Analytics data is tied to an app-instance ID, not to you; reinstalling the game creates a new one. To ask about or delete data linked to your installation, write to us and we will help through Google's tools.</li>
+    <li>If you are in the EEA, the UK or Switzerland you may also complain to your data protection authority.</li>
+  </ul>
+
+  <h2>Children</h2>
+  <p>The game is rated for players aged 13 and over, is not part of Google Play's Designed for Families programme and is not directed at children. If you believe a child under 13 has used the game, contact us and we will help remove any related data.</p>
+
+  <h2>Changes</h2>
+  <p>If this policy changes we will update this page and its effective date. Material changes will also be noted in the game's store listing.</p>
+
+  <h2>Contact</h2>
+  <p>Tan Interactive · <a href="mailto:taninteractive.dev@gmail.com">taninteractive.dev@gmail.com</a></p>
+</main>
+</body>
+</html>
