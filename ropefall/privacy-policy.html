@@ -1,0 +1,199 @@
+<!doctype html>
+<!--
+  Ropefall: Hold the Pass — privacy policy (GDD §34, §47; 13+ General Audience, not Designed for Families).
+  Published at https://taninteractive.github.io/ropefall/privacy-policy.html (APP_CONFIG.privacyUrl in
+  src/config/appConfig.ts; the same URL is in the AdMob GDPR message and goes into Play Console).
+  This file is the source: copy it to taninteractive/taninteractive.github.io ropefall/privacy-policy.html
+  after every change. Keep in sync with src/meta/adPolicy.ts (ad rules and caps), src/services/*
+  (AnalyticsManager, MonetizationManager, RemoteConfigManager), the merged manifest (AD_ID removed,
+  Analytics ad signals denied) and the Data safety answers (GDD §47).
+-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ropefall Privacy Policy</title>
+  <meta name="description" content="Privacy policy of Ropefall: Hold the Pass, a game by Tan Interactive.">
+  <style>
+    :root { --ink: #2a2340; --paper: #fffdf7; --accent: #f27324; --link: #b5501a; --rule: #ecd9bd; }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--paper); color: var(--ink); font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+    main { max-width: 760px; margin: 0 auto; padding: 24px 16px 64px; }
+    nav { margin-bottom: 8px; }
+    nav a { margin-right: 1rem; }
+    h1 { font-size: 1.6rem; line-height: 1.25; margin: 0 0 4px; }
+    h2 { font-size: 1.15rem; margin-top: 2rem; border-bottom: 2px solid var(--accent); padding-bottom: 2px; }
+    section + section { margin-top: 48px; padding-top: 24px; border-top: 1px solid var(--rule); }
+    p, li { overflow-wrap: anywhere; }
+    .muted { opacity: .75; font-size: .9rem; }
+    .table { overflow-x: auto; }
+    table { border-collapse: collapse; width: 100%; font-size: .95rem; }
+    th, td { border: 1px solid var(--rule); padding: 6px 8px; text-align: left; vertical-align: top; }
+    th { background: rgba(242, 115, 36, .08); }
+    a { color: var(--link); }
+  </style>
+</head>
+<body>
+<main>
+  <nav><a href="#en">English</a><a href="#vi">Tiếng Việt</a></nav>
+
+  <!-- ============================== ENGLISH ============================== -->
+  <section id="en" lang="en">
+    <h1>Ropefall: Hold the Pass — Privacy Policy</h1>
+    <p class="muted">Tan Interactive · Effective 15 October 2026 · App id <code>com.taninteractive.ropefall</code></p>
+
+    <p>Ropefall is a game for players aged 13 and over. It is not directed at children under 13. This page explains what data the game and the Google services it uses handle, why, and the choices you have. It covers the Google Play and the Amazon Appstore versions.</p>
+
+    <h2>What the game itself collects</h2>
+    <ul>
+      <li>No account, no sign-in, no names, no chat, no free-text input, no contacts, photos, microphone, camera or location permission.</li>
+      <li>Your progress (levels cleared, stars, currencies, gear, daily rewards) and settings (sound, music, vibration, screen shake, language) are saved only on your device. Android's own device backup may include them if you have turned it on; we never receive them. Uninstalling the game or clearing its storage erases them. Purchases can be restored from Google Play.</li>
+      <li>We run no servers of our own and keep no database about players.</li>
+    </ul>
+
+    <h2>Analytics and remote settings (Google Firebase)</h2>
+    <ul>
+      <li><strong>Firebase Analytics</strong> counts game events, for example "app opened", "screen viewed", "level started", "level finished" (won or lost, stars, time, how much of the gate was left, score), "rewarded ad offered / watched" and the ad revenue of each ad shown, so we can balance and improve the game. Events never contain names or anything you type. When the game hits an error it sends only where it happened (no message, no stack trace). Firebase uses an app-instance identifier and may derive an approximate location (country, region) from your IP address.</li>
+      <li>Analytics is never used for advertising: the game turns Firebase's advertising signals (ad storage, ad user data, ad personalisation) off for every player, and Analytics does not read the Android Advertising ID.</li>
+      <li>Analytics event data is kept for at most 14 months.</li>
+      <li><strong>Firebase Remote Config</strong> downloads game settings (for example how often ads may appear, daily caps and reward sizes) so we can tune the game without an update. It never changes the rules of a level.</li>
+      <li>Crash reports, if any, come from Android itself (Android vitals in Google Play), under Google's policies. The game uses no crash-reporting SDK.</li>
+    </ul>
+
+    <h2>Ads (Google AdMob)</h2>
+    <ul>
+      <li><strong>Rewarded ads are always your choice</strong>, for example Patch the Gate after a lost level, Extra Haul after a win or a spin of the Lucky Pulley. Each has a daily limit (at most 20 rewarded ads a day in total), and the button only appears when an ad is ready.</li>
+      <li><strong>Full-screen ads between levels</strong> only appear after a won level, once level 1-15 is cleared, after at least 15 minutes of play and never in your first session; at most every third win, at least 3 minutes apart, at most 3 an hour and 8 a day. Never during play, never after a lost level, never right before a story scene. Any purchase in the game turns them off for good.</li>
+      <li>There are no banner ads and no ads when the app opens. Ad content is limited to Teen or lower.</li>
+      <li>The game does not let AdMob read your device's Advertising ID (the permission is removed from the app). AdMob may use other device identifiers (such as the app set ID), approximate location from the IP address, and diagnostic and ad-interaction data to show, limit, measure and protect ads from fraud. How Google uses data from apps: <a href="https://policies.google.com/technologies/partner-sites">policies.google.com/technologies/partner-sites</a>.</li>
+      <li>The Amazon Appstore version shows the same AdMob ads under the same rules.</li>
+    </ul>
+
+    <h2>Your consent choices</h2>
+    <ul>
+      <li>Before any ad is requested, the game checks with Google's User Messaging Platform. Where the law requires consent (for example in the European Economic Area, the United Kingdom and Switzerland), Google's consent message is shown first. You can consent, refuse, or choose purpose by purpose. If you refuse, the game still plays, with limited, non-personalised ads.</li>
+      <li>You can change your choice at any time: Settings → Ad privacy choices (shown wherever your region has such a form).</li>
+    </ul>
+
+    <h2>Purchases</h2>
+    <ul>
+      <li>Optional purchases go through Google Play; the Amazon Appstore version sells nothing for real money. We never receive your payment details; Google Play keeps your purchase history. Google Play reports purchases (which item, its price and currency) to Firebase Analytics like any other game event.</li>
+      <li>Some chests contain random items. Their odds are shown in the game before you open one.</li>
+    </ul>
+
+    <h2>Ratings and links</h2>
+    <p>In the Google Play version the game may show Google Play's built-in review card. Reviews go directly to Google Play; we do not receive them through the game. Links (such as this policy) open in your browser. The game sends no push notifications.</p>
+
+    <h2>For residents of US states (CCPA/CPRA and similar laws)</h2>
+    <div class="table">
+      <table>
+        <thead><tr><th>Category</th><th>Example</th><th>Received by</th></tr></thead>
+        <tbody>
+          <tr><td>Identifiers</td><td>Firebase app-instance ID, app set ID</td><td>Google (Firebase, AdMob)</td></tr>
+          <tr><td>Internet or other electronic activity</td><td>Game events, ad views and taps</td><td>Google (Firebase, AdMob)</td></tr>
+          <tr><td>Approximate geolocation</td><td>Country or region from the IP address</td><td>Google (Firebase, AdMob)</td></tr>
+          <tr><td>Commercial information</td><td>Purchase history</td><td>Google Play</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>We do not sell personal information for money. Letting AdMob use identifiers for targeted advertising may count as "sharing" or "sale" under some state laws; you can refuse it in Settings → Ad privacy choices where your region has that form.</p>
+
+    <h2>Your rights and data deletion</h2>
+    <ul>
+      <li>Data on your device: uninstall the game, or Android Settings → Apps → Ropefall → Storage → Clear storage.</li>
+      <li>Analytics data is tied to an app-instance ID, not to you; reinstalling the game creates a new one. To ask about or delete data linked to your installation, email <a href="mailto:taninteractive.dev@gmail.com?subject=Ropefall%20data%20deletion">taninteractive.dev@gmail.com</a> with the subject "Ropefall data deletion" and we will help through Google's tools within 30 days.</li>
+      <li>Depending on where you live (for example under the EU/UK GDPR or US state laws) you may have the right to access, correct or delete your personal data and to withdraw consent. If you are in the EEA, the UK or Switzerland you may also complain to your data protection authority.</li>
+      <li>Data sent to Firebase and AdMob is encrypted in transit and may be processed on servers outside your country, including in the United States.</li>
+    </ul>
+
+    <h2>Children</h2>
+    <p>The game is intended for players aged 13 and over, is not part of Google Play's Designed for Families programme and is not directed at children. If you believe a child under 13 has used the game, contact us and we will help remove any related data.</p>
+
+    <h2>Changes</h2>
+    <p>If this policy changes we will update this page and its date before the version that needs the change is released.</p>
+
+    <h2>Contact</h2>
+    <p>Tan Interactive · <a href="mailto:taninteractive.dev@gmail.com">taninteractive.dev@gmail.com</a></p>
+  </section>
+
+  <!-- ============================== TIẾNG VIỆT ============================== -->
+  <section id="vi" lang="vi">
+    <h1>Ropefall: Hold the Pass — Chính sách quyền riêng tư</h1>
+    <p class="muted">Tan Interactive · Hiệu lực 15/10/2026 · App id <code>com.taninteractive.ropefall</code></p>
+
+    <p>Ropefall dành cho người chơi từ 13 tuổi trở lên, không hướng tới trẻ em dưới 13 tuổi. Trang này giải thích trò chơi và các dịch vụ Google mà trò chơi dùng xử lý dữ liệu gì, để làm gì, và bạn có những lựa chọn nào. Trang áp dụng cho cả bản Google Play và bản Amazon Appstore.</p>
+
+    <h2>Trò chơi tự thu thập gì</h2>
+    <ul>
+      <li>Không tài khoản, không đăng nhập, không tên, không chat, không nhập chữ tự do, không xin quyền danh bạ, ảnh, micro, camera hay vị trí.</li>
+      <li>Tiến độ (màn đã qua, sao, tiền trong game, trang bị, phần thưởng hằng ngày) và cài đặt (âm thanh, nhạc, rung, rung màn hình, ngôn ngữ) chỉ lưu trên máy của bạn. Bản sao lưu thiết bị của Android có thể chứa chúng nếu bạn bật tính năng đó; chúng tôi không bao giờ nhận được. Gỡ game hoặc xoá bộ nhớ của game sẽ xoá chúng. Giao dịch mua có thể khôi phục từ Google Play.</li>
+      <li>Chúng tôi không có máy chủ riêng và không giữ cơ sở dữ liệu nào về người chơi.</li>
+    </ul>
+
+    <h2>Phân tích và cấu hình từ xa (Google Firebase)</h2>
+    <ul>
+      <li><strong>Firebase Analytics</strong> đếm sự kiện trong game, ví dụ "mở app", "xem màn hình", "bắt đầu màn", "kết thúc màn" (thắng hay thua, số sao, thời gian, cổng còn bao nhiêu, điểm), "mời / xem quảng cáo có thưởng" và doanh thu của mỗi quảng cáo đã hiện, để cân bằng và cải thiện game. Sự kiện không bao giờ chứa tên hay bất cứ thứ gì bạn gõ. Khi game gặp lỗi, chỉ gửi vị trí lỗi trong code (không gửi nội dung lỗi). Firebase dùng mã định danh lượt cài đặt ứng dụng và có thể suy ra vị trí gần đúng (quốc gia, vùng) từ địa chỉ IP.</li>
+      <li>Dữ liệu phân tích không bao giờ dùng cho quảng cáo: game tắt các tín hiệu quảng cáo của Firebase (lưu trữ quảng cáo, dữ liệu người dùng cho quảng cáo, cá nhân hoá quảng cáo) cho mọi người chơi, và Analytics không đọc Mã quảng cáo (Advertising ID) của Android.</li>
+      <li>Dữ liệu sự kiện được giữ tối đa 14 tháng.</li>
+      <li><strong>Firebase Remote Config</strong> tải cấu hình game (ví dụ quảng cáo được hiện thưa hay dày, giới hạn mỗi ngày, lượng thưởng) để chỉnh game mà không cần cập nhật. Nó không bao giờ đổi luật chơi của một màn.</li>
+      <li>Báo cáo sự cố (nếu có) do chính Android thu (Android vitals trên Google Play), theo chính sách của Google. Game không dùng SDK báo lỗi nào.</li>
+    </ul>
+
+    <h2>Quảng cáo (Google AdMob)</h2>
+    <ul>
+      <li><strong>Quảng cáo có thưởng luôn do bạn chọn</strong>, ví dụ Patch the Gate sau màn thua, Extra Haul sau màn thắng hay một lượt quay Lucky Pulley. Mỗi loại có giới hạn mỗi ngày (tổng cộng tối đa 20 quảng cáo có thưởng một ngày), và nút chỉ hiện khi có quảng cáo sẵn sàng.</li>
+      <li><strong>Quảng cáo toàn màn hình giữa các màn</strong> chỉ hiện sau màn thắng, khi đã qua màn 1-15, đã chơi ít nhất 15 phút và không bao giờ trong lần chơi đầu tiên; tối đa mỗi 3 lần thắng, cách nhau ít nhất 3 phút, tối đa 3 lần một giờ và 8 lần một ngày. Không bao giờ trong lúc chơi, sau màn thua hay ngay trước một cảnh truyện. Bất kỳ giao dịch mua nào cũng tắt vĩnh viễn loại quảng cáo này.</li>
+      <li>Không có quảng cáo biểu ngữ (banner) và không có quảng cáo khi mở app. Nội dung quảng cáo giới hạn ở mức Teen trở xuống.</li>
+      <li>Game không cho AdMob đọc Mã quảng cáo (Advertising ID) của máy (quyền này đã bị gỡ khỏi ứng dụng). AdMob có thể dùng các mã định danh thiết bị khác (như app set ID), vị trí gần đúng từ địa chỉ IP, dữ liệu chẩn đoán và tương tác quảng cáo để hiển thị, giới hạn, đo lường và chống gian lận quảng cáo. Cách Google dùng dữ liệu từ ứng dụng: <a href="https://policies.google.com/technologies/partner-sites">policies.google.com/technologies/partner-sites</a>.</li>
+      <li>Bản Amazon Appstore hiện cùng quảng cáo AdMob theo đúng các quy tắc trên.</li>
+    </ul>
+
+    <h2>Lựa chọn đồng ý của bạn</h2>
+    <ul>
+      <li>Trước khi yêu cầu bất kỳ quảng cáo nào, game hỏi Nền tảng nhắn tin người dùng (UMP) của Google. Ở nơi luật yêu cầu sự đồng ý (ví dụ Khu vực kinh tế châu Âu, Vương quốc Anh và Thụy Sĩ), thông báo đồng ý của Google hiện trước. Bạn có thể đồng ý, từ chối hoặc chọn từng mục đích. Nếu từ chối, bạn vẫn chơi được, với quảng cáo hạn chế, không cá nhân hoá.</li>
+      <li>Bạn có thể đổi lựa chọn bất cứ lúc nào: Cài đặt → Lựa chọn quyền riêng tư quảng cáo (hiện ở nơi khu vực của bạn có biểu mẫu này).</li>
+    </ul>
+
+    <h2>Mua hàng</h2>
+    <ul>
+      <li>Mua hàng tuỳ chọn qua Google Play; bản Amazon Appstore không bán gì bằng tiền thật. Chúng tôi không nhận thông tin thanh toán; Google Play giữ lịch sử mua của bạn. Google Play báo giao dịch (vật phẩm, giá và loại tiền) về Firebase Analytics như mọi sự kiện khác trong game.</li>
+      <li>Một số rương chứa vật phẩm ngẫu nhiên. Tỉ lệ được hiện trong game trước khi bạn mở.</li>
+    </ul>
+
+    <h2>Đánh giá và liên kết</h2>
+    <p>Ở bản Google Play, game có thể hiện thẻ đánh giá có sẵn của Google Play. Đánh giá gửi thẳng tới Google Play; chúng tôi không nhận qua game. Liên kết (như trang này) mở bằng trình duyệt. Game không gửi thông báo đẩy.</p>
+
+    <h2>Cư dân các bang Hoa Kỳ (CCPA/CPRA và luật tương tự)</h2>
+    <div class="table">
+      <table>
+        <thead><tr><th>Loại dữ liệu</th><th>Ví dụ</th><th>Bên nhận</th></tr></thead>
+        <tbody>
+          <tr><td>Mã định danh</td><td>ID lượt cài đặt Firebase, app set ID</td><td>Google (Firebase, AdMob)</td></tr>
+          <tr><td>Hoạt động điện tử</td><td>Sự kiện trong game, lượt xem và chạm quảng cáo</td><td>Google (Firebase, AdMob)</td></tr>
+          <tr><td>Vị trí gần đúng</td><td>Quốc gia hoặc vùng từ địa chỉ IP</td><td>Google (Firebase, AdMob)</td></tr>
+          <tr><td>Thông tin thương mại</td><td>Lịch sử mua</td><td>Google Play</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Chúng tôi không bán thông tin cá nhân để lấy tiền. Việc cho AdMob dùng mã định danh để quảng cáo nhắm mục tiêu có thể được coi là "chia sẻ" hoặc "bán" theo luật một số bang; bạn có thể từ chối trong Cài đặt → Lựa chọn quyền riêng tư quảng cáo nếu khu vực của bạn có biểu mẫu này.</p>
+
+    <h2>Quyền của bạn và xoá dữ liệu</h2>
+    <ul>
+      <li>Dữ liệu trên máy: gỡ game, hoặc Cài đặt Android → Ứng dụng → Ropefall → Bộ nhớ → Xoá bộ nhớ.</li>
+      <li>Dữ liệu phân tích gắn với ID lượt cài đặt, không gắn với bạn; cài lại game sẽ tạo ID mới. Để hỏi hoặc xoá dữ liệu gắn với lượt cài đặt của bạn, gửi email tới <a href="mailto:taninteractive.dev@gmail.com?subject=Ropefall%20data%20deletion">taninteractive.dev@gmail.com</a> với tiêu đề "Ropefall data deletion"; chúng tôi sẽ xử lý qua công cụ của Google trong 30 ngày.</li>
+      <li>Tuỳ nơi bạn sống (ví dụ GDPR của EU/Anh hoặc luật các bang Hoa Kỳ), bạn có thể có quyền truy cập, sửa, xoá dữ liệu cá nhân và rút lại sự đồng ý. Nếu ở EEA, Vương quốc Anh hoặc Thụy Sĩ, bạn cũng có thể khiếu nại với cơ quan bảo vệ dữ liệu.</li>
+      <li>Dữ liệu gửi tới Firebase và AdMob được mã hoá khi truyền và có thể được xử lý trên máy chủ ngoài quốc gia của bạn, kể cả tại Hoa Kỳ.</li>
+    </ul>
+
+    <h2>Trẻ em</h2>
+    <p>Game dành cho người chơi từ 13 tuổi trở lên, không thuộc chương trình Designed for Families của Google Play và không hướng tới trẻ em. Nếu bạn cho rằng một trẻ dưới 13 tuổi đã dùng game, hãy liên hệ, chúng tôi sẽ giúp xoá dữ liệu liên quan.</p>
+
+    <h2>Thay đổi</h2>
+    <p>Nếu chính sách thay đổi, chúng tôi sẽ cập nhật trang này và ngày của nó trước khi phát hành phiên bản cần thay đổi đó.</p>
+
+    <h2>Liên hệ</h2>
+    <p>Tan Interactive · <a href="mailto:taninteractive.dev@gmail.com">taninteractive.dev@gmail.com</a></p>
+  </section>
+</main>
+</body>
+</html>
