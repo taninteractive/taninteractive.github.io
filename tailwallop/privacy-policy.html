@@ -1,0 +1,126 @@
+<!doctype html>
+<!--
+  Tailwallop: Swing the Herd — privacy policy (GDD §34, §46.5, §47; 13+ General Audience, not Designed for Families).
+  Published at https://taninteractive.github.io/tailwallop/privacy-policy.html (APP_CONFIG.privacyUrl in
+  src/config/appConfig.ts; the same URL is in the published AdMob GDPR message "Tailwallop — European regulations"
+  and goes into Play Console and the Amazon Appstore console).
+  This file is the source: copy it to taninteractive/taninteractive.github.io as tailwallop/privacy-policy.html after
+  every change (owner gate OG-GH). Keep it in sync with src/meta/adPolicy.ts + src/data/remoteConfig.ts (ad rules and
+  caps), src/services/* (AnalyticsManager, MonetizationManager, RemoteConfigManager, BillingManager), the merged
+  manifest (AD_ID removed, Analytics ad signals denied by tan-core android-setup) and the Data safety answers in
+  docs/STORE-LISTING.md §6.3.
+-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tailwallop Privacy Policy</title>
+  <meta name="description" content="Privacy policy of Tailwallop: Swing the Herd, a game by Tan Interactive.">
+  <style>
+    :root { --ink: #2a2340; --paper: #fffdf7; --accent: #e8a21a; --link: #8a4b0e; --rule: #ecd9bd; --soft: #fff3d6; }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--paper); color: var(--ink); font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+    main { max-width: 760px; margin: 0 auto; padding: 24px 16px 64px; }
+    h1 { font-size: 1.6rem; line-height: 1.25; margin: 0 0 4px; }
+    h2 { font-size: 1.15rem; margin-top: 2rem; border-bottom: 2px solid var(--accent); padding-bottom: 2px; }
+    p, li { overflow-wrap: anywhere; }
+    .muted { opacity: .75; font-size: .9rem; }
+    .summary { background: var(--soft); border: 1px solid var(--rule); border-radius: 12px; padding: 4px 16px; }
+    .table { overflow-x: auto; }
+    table { border-collapse: collapse; width: 100%; font-size: .95rem; }
+    th, td { border: 1px solid var(--rule); padding: 6px 8px; text-align: left; vertical-align: top; }
+    th { background: rgba(232, 162, 26, .12); }
+    a { color: var(--link); }
+    @media (prefers-color-scheme: dark) {
+      :root { --ink: #f4ecdf; --paper: #1e1830; --link: #ffc86b; --rule: #4a3f66; --soft: #2a2340; }
+    }
+  </style>
+</head>
+<body>
+<main>
+  <h1>Tailwallop: Swing the Herd — Privacy Policy</h1>
+  <p class="muted">Tan Interactive · Effective 18 October 2026 · App id <code>com.taninteractive.tailwallop</code></p>
+
+  <p>Tailwallop is a game for players aged 13 and over. It is not directed at children under 13. This page explains what data the game and the Google services it uses handle, why, and the choices you have. It covers the Google Play and the Amazon Appstore versions.</p>
+
+  <div class="summary">
+    <p><strong>In short:</strong> no account, no sign-in, nothing you type is collected. Your progress stays on your device. Google Firebase counts anonymous game events and sends game settings; Google AdMob shows ads after asking for your consent where the law requires it. The only identifiers involved are device identifiers such as the Firebase app-instance ID and the app set ID used for ads. Purchases go through Google Play; the Amazon version sells nothing for real money.</p>
+  </div>
+
+  <h2>What the game itself collects</h2>
+  <ul>
+    <li>No account, no sign-in, no names, no email, no chat, no free-text input, no leaderboards, and no contacts, photos, microphone, camera or location permission.</li>
+    <li>Your progress (levels cleared, stars, Coins, Gems and Shavings, gear, helpers, boosters, daily rewards, the Lantern Pass) and your settings (sound, music, vibration, screen shake, text size, language) are saved only on your device. Android's own device backup may include them if you have turned it on; we never receive them.</li>
+    <li>Uninstalling the game or clearing its storage erases them. One-time purchases (the Starter Pack, No Ads, the Heirlooms and outfit packs) can be restored with "Restore purchases" in the Shop. Items that are used up when delivered (Gems, bundles, the Shear Purse, the Lantern Pass, boosters) are kept only in the save on your device and are lost if you uninstall the game.</li>
+    <li>We run no servers of our own and keep no database about players.</li>
+  </ul>
+
+  <h2>Analytics and remote settings (Google Firebase)</h2>
+  <ul>
+    <li><strong>Firebase Analytics</strong> counts game events, for example "app opened", "screen viewed", "level started", "level finished" (won or lost, stars, time, score, how much of the gate was left), "rewarded ad offered / watched", in-game currency earned and spent, chests opened, boosters used and the ad revenue of each ad shown, so we can balance and improve the game. Events never contain names or anything you type. When the game hits an error it sends only where it happened in the code and the kind of error (no message, no stack trace).</li>
+    <li>Firebase uses an app-instance identifier and may derive an approximate location (country, region) from your IP address.</li>
+    <li>Analytics is never used for advertising: the game turns Firebase's advertising signals (ad storage, ad user data, ad personalisation) off for every player, and Analytics does not read the Android Advertising ID.</li>
+    <li>Analytics event data is kept for at most 14 months.</li>
+    <li><strong>Firebase Remote Config</strong> downloads game settings (for example how often ads may appear, daily caps and reward sizes) so we can tune the game without an update, using a Firebase installation identifier. It never changes the rules of a level.</li>
+    <li>Crash reports, if any, come from Android itself (Android vitals in Google Play), under Google's policies. The game uses no crash-reporting SDK.</li>
+  </ul>
+
+  <h2>Ads (Google AdMob)</h2>
+  <ul>
+    <li><strong>Rewarded ads are always your choice</strong>, for example One More Swing after a lost level, double Coins after a win, a free booster, an extra Fleece Sack or a spin of the Daily spin. Each has a daily limit (by default at most 20 rewarded ads a day in total), and the button only appears when an ad is ready.</li>
+    <li><strong>Full-screen ads between levels</strong> only appear when you leave a won level, once level 1-10 is cleared, after at least 15 minutes of play and never in your first session; by default at most every third win, at least 3 minutes apart, at most 6 a session and 10 a day (never closer than 2 minutes or more than 12 a day), never right after a revive or within a minute of a rewarded ad. Never during play, never after a lost level, never right before a story scene. Any purchase in the game turns them off for good.</li>
+    <li>There are no banner ads and no ads when the app opens. Ad content is limited to Teen or lower.</li>
+    <li>The game does not let AdMob read your device's Advertising ID (the permission is removed from the app). AdMob may use other device identifiers (such as the app set ID), approximate location from the IP address, and diagnostic and ad-interaction data to show, limit, measure and protect ads from fraud. How Google uses data from apps: <a href="https://policies.google.com/technologies/partner-sites">policies.google.com/technologies/partner-sites</a>.</li>
+    <li>The Amazon Appstore version shows the same AdMob ads under the same rules.</li>
+  </ul>
+
+  <h2 id="consent">Your consent choices</h2>
+  <ul>
+    <li>Before any ad is requested, the game checks with Google's User Messaging Platform (UMP). Where the law requires consent (for example in the European Economic Area, the United Kingdom and Switzerland), Google's consent message is shown first. You can consent, refuse ("Do not consent"), or choose purpose by purpose ("Manage options"). If you refuse, the game still plays, with limited, non-personalised ads.</li>
+    <li>In US states with consumer privacy laws, Google's message lets you opt out of the "sale" or "sharing" of personal information ("Do not sell or share my data") and of targeted advertising.</li>
+    <li>You can change your choice at any time: Settings → Ad privacy choices (the row is shown wherever your region has such a form). Settings → Privacy policy opens this page.</li>
+  </ul>
+
+  <h2>Purchases</h2>
+  <ul>
+    <li>Optional purchases go through Google Play; the Amazon Appstore version sells nothing for real money. We never receive your payment details; Google Play keeps your purchase history. Google Play reports purchases (which item, its price and currency) to Firebase Analytics like any other game event.</li>
+    <li>The Wool Bale and Lantern Chest (bought with Coins or Gems) and the Fleece Sack give random items. Their odds are printed on every chest button and on the Odds screen before you open one, and the Lantern Chest shows its pity counters. Chests are never sold directly for real money. Spins of the Daily spin are free or come from a rewarded ad and are never sold.</li>
+  </ul>
+
+  <h2>Links</h2>
+  <p>Links (such as this policy) open in your browser. The game shows no review prompt, sends no push notifications and has no social or sharing features.</p>
+
+  <h2>For residents of US states (CCPA/CPRA and similar laws)</h2>
+  <div class="table">
+    <table>
+      <thead><tr><th>Category</th><th>Example</th><th>Received by</th></tr></thead>
+      <tbody>
+        <tr><td>Identifiers</td><td>Firebase app-instance ID, Firebase installation ID, app set ID</td><td>Google (Firebase, AdMob)</td></tr>
+        <tr><td>Internet or other electronic activity</td><td>Game events, ad views and taps</td><td>Google (Firebase, AdMob)</td></tr>
+        <tr><td>Approximate geolocation</td><td>Country or region from the IP address</td><td>Google (Firebase, AdMob)</td></tr>
+        <tr><td>Commercial information</td><td>Purchase history (Google Play version only)</td><td>Google Play, Firebase Analytics</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>We do not sell personal information for money. Letting AdMob use identifiers for targeted advertising may count as "sharing" or "sale" under some state laws; you can refuse it in Settings → Ad privacy choices where your region has that form.</p>
+
+  <h2 id="delete-data">Your rights and data deletion</h2>
+  <ul>
+    <li><strong>Data on your device:</strong> uninstall the game, or Android Settings → Apps → Tailwallop → Storage → Clear storage.</li>
+    <li><strong>Analytics data</strong> is tied to an app-instance ID, not to you; reinstalling the game creates a new one, and you can reset the ad identifiers of your device in Android Settings (Google → Ads, or Privacy → Ads).</li>
+    <li>To ask about or delete data linked to your installation, email <a href="mailto:taninteractive.dev@gmail.com?subject=Tailwallop%20data%20deletion">taninteractive.dev@gmail.com</a> with the subject "Tailwallop data deletion". We will help through Google's tools (Firebase / Google Analytics user deletion) within 30 days.</li>
+    <li>Depending on where you live (for example under the EU/UK GDPR or US state laws) you may have the right to access, correct or delete your personal data and to withdraw consent. If you are in the EEA, the UK or Switzerland you may also complain to your data protection authority.</li>
+    <li>Data sent to Firebase and AdMob is encrypted in transit and may be processed on servers outside your country, including in the United States.</li>
+  </ul>
+
+  <h2>Children</h2>
+  <p>The game is intended for players aged 13 and over, is not part of Google Play's Designed for Families programme and is not directed at children. If you believe a child under 13 has used the game, contact us and we will help remove any related data.</p>
+
+  <h2>Changes</h2>
+  <p>If this policy changes we will update this page and its date before the version that needs the change is released.</p>
+
+  <h2>Contact</h2>
+  <p>Tan Interactive · <a href="mailto:taninteractive.dev@gmail.com">taninteractive.dev@gmail.com</a> · <a href="https://taninteractive.github.io">taninteractive.github.io</a></p>
+</main>
+</body>
+</html>
