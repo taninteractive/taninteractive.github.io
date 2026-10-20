@@ -1,0 +1,164 @@
+<!doctype html>
+<!--
+  Seedblade: Grow Your Weapons — privacy policy (T3.6; GDD §34, §46.5, §47; 13+ General Audience, not Designed for Families).
+  Published at https://taninteractive.github.io/seedblade/privacy-policy.html (APP_CONFIG.privacyUrl in
+  src/config/appConfig.ts; the same URL is in the published AdMob GDPR message "Seedblade — European regulations"
+  and goes into Play Console and the Amazon Appstore console).
+  This file is the source: copy it byte for byte to taninteractive/taninteractive.github.io as seedblade/privacy-policy.html
+  after every change (owner gate OG-GH). Keep it in sync with src/meta/adPolicy.ts + src/data/remoteConfig.ts (ad rules
+  and caps), src/meta/storeGate.ts (what each store build sells), src/services/* (AnalyticsManager, MonetizationManager,
+  RemoteConfigManager, BillingManager), docs/ANALYTICS.md, the merged manifest (AD_ID removed and Analytics ad signals
+  denied by tan-core android-setup) and the Data safety answers in docs/STORE-LISTING.md §6.3.
+-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Seedblade Privacy Policy</title>
+  <meta name="description" content="Privacy policy of Seedblade: Grow Your Weapons, a game by Tan Interactive.">
+  <style>
+    :root { --ink: #2a2340; --paper: #fbfdf5; --accent: #5aa83a; --link: #2f6d1c; --rule: #d6e6c4; --soft: #eef7e2; --th: rgba(90, 168, 58, .14); }
+    * { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; }
+    body { margin: 0; background: var(--paper); color: var(--ink); font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+    main { max-width: 760px; margin: 0 auto; padding: 24px 16px 64px; }
+    h1 { font-size: 1.6rem; line-height: 1.25; margin: 0 0 4px; }
+    h2 { font-size: 1.15rem; margin-top: 2rem; border-bottom: 2px solid var(--accent); padding-bottom: 2px; }
+    h3 { font-size: 1rem; margin: 1.2rem 0 .3rem; }
+    p, li, td { overflow-wrap: anywhere; }
+    ul { padding-left: 1.25rem; }
+    li { margin: .25rem 0; }
+    code { font-size: .9em; }
+    .muted { opacity: .78; font-size: .9rem; }
+    .summary { background: var(--soft); border: 1px solid var(--rule); border-radius: 12px; padding: 4px 16px; }
+    .table { overflow-x: auto; }
+    table { border-collapse: collapse; width: 100%; font-size: .95rem; }
+    th, td { border: 1px solid var(--rule); padding: 6px 8px; text-align: left; vertical-align: top; }
+    th { background: var(--th); }
+    a { color: var(--link); }
+    @media (prefers-color-scheme: dark) {
+      :root { --ink: #eef3e4; --paper: #18211a; --accent: #7fcf5c; --link: #a8e48a; --rule: #34503a; --soft: #213026; --th: rgba(127, 207, 92, .14); }
+    }
+  </style>
+</head>
+<body>
+<main>
+  <h1>Seedblade: Grow Your Weapons — Privacy Policy</h1>
+  <p class="muted">Tan Interactive · Last updated: 20 October 2026 · App id <code>com.taninteractive.seedblade</code></p>
+
+  <p>Seedblade: Grow Your Weapons ("Seedblade", "the game") is made by Tan Interactive, a one-person game studio ("we", "us"). You can reach us at <a href="mailto:taninteractive.dev@gmail.com">taninteractive.dev@gmail.com</a> or <a href="https://taninteractive.github.io">taninteractive.github.io</a>. The game is meant for players aged 13 and over and is not directed at children under 13. This page explains what data the game and the Google services inside it handle, why, and the choices you have. It covers both the Google Play version and the Amazon Appstore version.</p>
+
+  <div class="summary">
+    <p><strong>In short:</strong> no account, no sign-in, no chat and nothing you type is collected. Your progress and purchases are saved only on your device; we run no servers and keep no player database. Google Firebase counts game events without names or email and sends game settings. Google AdMob shows rewarded ads you choose to watch and a few full-screen ads after won levels, after asking for your consent where the law requires it. The game does not request the Android Advertising ID permission. Purchases go through Google Play; the Amazon Appstore version sells nothing for real money.</p>
+  </div>
+
+  <h2>What the game stores on your device</h2>
+  <ul>
+    <li>Your save: levels cleared, stars, route choices, Coins, Gems and other in-game items, gear, skills, allies, boosters, outfits, daily rewards, the Greenhouse Pass, event progress, simple play counters, and a record of what you have bought and received.</li>
+    <li>Your settings: sound, music, vibration, language, text and button size, auto-swing, left-handed controls, tap to move, reduce motion, and your answers to one-time notes.</li>
+    <li>All of this is kept in the app's own storage on your device (no account, no cloud save). We never receive it. If you have turned on Android's own device backup, Android may include it in your Google backup under Google's terms.</li>
+    <li>Uninstalling the game or clearing its storage erases it. On the Google Play version, "Restore purchases" (Settings › Privacy) brings back one-time purchases such as Legacy Tools, No Ads and outfit packs. Items used up when delivered (Coins, Gems, boosters, chests and the contents of bundles, offers, the Seed Box, the Sprout Tin and the Greenhouse Pass) exist only in the save on your device and are lost if you uninstall the game.</li>
+    <li>The game has no account, no sign-in, no names, no email, no chat, no free-text input, no online leaderboards and no user-generated content. It does not ask for access to your contacts, photos, files, camera, microphone or location.</li>
+  </ul>
+
+  <h2>Analytics (Google Firebase Analytics)</h2>
+  <ul>
+    <li>Firebase Analytics records game events so we can balance and improve the game, for example: app opened, screen viewed, level started and finished (won or lost, stars, score, time, health left, hybrids grown, boosters used), tutorial steps, route chosen, in-game currency earned and spent, chests opened, daily rewards claimed, rewarded ads offered and watched, full-screen ads shown, the revenue reported for each ad shown, and purchase steps in the Shop. Events contain only game ids, numbers and fixed labels, never names, email or anything you type.</li>
+    <li>Firebase also collects some data automatically: an app-instance ID (a random identifier created for this installation), the device model, Android version, app version, language, and an approximate location (such as country or region) that Google derives from your IP address. It does not collect your precise location.</li>
+    <li>Analytics is not used for advertising. The game turns Firebase's advertising signals (ad storage, ad user data and ad personalisation) off by default for every player, and the game does not request the Android Advertising ID permission.</li>
+    <li><strong>Error reports:</strong> if the game hits an unexpected error it sends one analytics event (<code>app_error</code>, at most 5 per session) with only the place in the game's code and the kind of error. There is no crash-reporting SDK; crash statistics, if any, come from Android itself (Android vitals in Google Play) under Google's policies.</li>
+    <li>We set Google Analytics to keep event data for up to 14 months; after that Google deletes it automatically.</li>
+  </ul>
+
+  <h2>Remote settings (Google Firebase Remote Config)</h2>
+  <ul>
+    <li>Firebase Remote Config downloads game settings, for example reward sizes, prices in Coins and Gems, how often full-screen ads may appear and daily ad limits, so we can tune the game without an update. Every value is limited to a safe range inside the game and can never change the rules of a level.</li>
+    <li>To do this, Firebase uses a Firebase installation ID (a random identifier for this installation) and the usual technical data of a network request, such as your IP address.</li>
+  </ul>
+
+  <h2>Ads (Google AdMob)</h2>
+  <ul>
+    <li><strong>Rewarded ads are always your choice.</strong> You tap a button to watch one, for example to double your Coins after a win, bloom again after a lost fight (Second Bloom), get a free booster or Clay Pot, spin the Daily spin again, collect the Glasshouse twice, get new Daily deals, change a daily task, mend your Watering Streak, double Graft Fair ribbons, try a Legacy Tool for one level or retry the Daily challenge. Each has its own daily limit and there are never more than 20 rewarded ads a day in total. The button only appears when an ad is ready.</li>
+    <li><strong>Full-screen ads between levels</strong> only appear when you leave a won level. Never in your first session, never during play, never after a lost level, never right after a revive or within a minute of a rewarded ad, never right before a story scene, and only after level 1-10 is cleared and 15 minutes of play. By default at most one every third win, at least 3 minutes apart, at most 6 a session and 10 a day (never closer than 2 minutes or more than 12 a day). <strong>Any purchase in the game turns them off for good.</strong></li>
+    <li>There are no banner ads and no ads when the app opens. Ad content is limited to the Teen rating or lower.</li>
+    <li><strong>Advertising identifiers:</strong> the game does not request the Android Advertising ID permission (<code>com.google.android.gms.permission.AD_ID</code> is removed from the app), so AdMob cannot read your device's Advertising ID. AdMob may still use other device signals, such as the app set ID, your IP address (for approximate location), device and app information, and ad interaction and diagnostic data, to show, limit and measure ads and to prevent fraud. On Android versions that offer it, the Google Mobile Ads SDK declares the Android Privacy Sandbox ad services (<code>ACCESS_ADSERVICES_AD_ID</code>, <code>ACCESS_ADSERVICES_ATTRIBUTION</code>, <code>ACCESS_ADSERVICES_TOPICS</code>), which Google may use as described in its own documentation; you control them in your device's privacy settings.</li>
+    <li>How Google uses data from apps that use its services: <a href="https://policies.google.com/technologies/partner-sites">policies.google.com/technologies/partner-sites</a>. Google's privacy policy: <a href="https://policies.google.com/privacy">policies.google.com/privacy</a>. AdMob and user privacy: <a href="https://support.google.com/admob/answer/6128543">support.google.com/admob/answer/6128543</a>.</li>
+    <li>The Amazon Appstore version shows the same AdMob ads under the same rules.</li>
+  </ul>
+
+  <h2 id="consent">Your consent choices</h2>
+  <ul>
+    <li>Before any ad is requested, the game checks with Google's User Messaging Platform (UMP). Where the law requires consent (for example in the European Economic Area, the United Kingdom and Switzerland), Google's consent message is shown first. You can consent, refuse ("Do not consent") or choose purpose by purpose ("Manage options"). If you refuse, the game still plays in full, with limited, non-personalised ads.</li>
+    <li>In US states with consumer privacy laws, Google's message lets you opt out of the "sale" or "sharing" of your personal information for targeted advertising ("Do not sell or share my data").</li>
+    <li>You can change your choice at any time: <strong>Settings › Privacy › Ad privacy choices</strong> (the button appears wherever your region has such a form). Settings › Privacy › Privacy policy opens this page.</li>
+    <li>You can also reset or delete your device's advertising identifiers and limit ad personalisation in Android's own settings (Settings › Privacy › Ads, or Settings › Google › Ads, depending on the device).</li>
+  </ul>
+
+  <h2>Purchases</h2>
+  <ul>
+    <li><strong>Google Play version:</strong> optional purchases are made through Google Play Billing. Google handles the payment; we never see your card or payment details. The purchase token Google Play returns is checked on your device to deliver the item; we run no purchase server. Google Play keeps your purchase history, and Firebase Analytics records each purchase (which item, its price and currency) like any other game event.</li>
+    <li><strong>Amazon Appstore version:</strong> sells nothing for real money. It contains no Google Play Billing and no other payment system; everything in its Shop is bought with Coins and Gems earned in the game.</li>
+    <li>Some items are random. The Clay Pot (free or from a rewarded ad), the Wicker Basket (bought with Coins) and the Glasshouse Crate (bought with Gems, which can also be bought with real money on Google Play) give random items. Their odds and pity counters are shown before you open one. Chests are not sold on their own for real money, but some bundles and the Greenhouse Pass include them. Spins of the Daily spin are free or come from a rewarded ad and are never sold.</li>
+  </ul>
+
+  <h2>Android permissions</h2>
+  <div class="table">
+    <table>
+      <thead><tr><th>Permission</th><th>Why</th></tr></thead>
+      <tbody>
+        <tr><td><code>INTERNET</code>, <code>ACCESS_NETWORK_STATE</code></td><td>Load ads, send analytics events, fetch remote settings, talk to the store. The game itself plays offline.</td></tr>
+        <tr><td><code>VIBRATE</code></td><td>Short vibrations during play, only if you turn on Settings › Vibration (off by default).</td></tr>
+        <tr><td><code>com.android.vending.BILLING</code></td><td>Google Play purchases (Google Play version only; the Amazon Appstore version does not include it).</td></tr>
+        <tr><td><code>ACCESS_ADSERVICES_AD_ID</code>, <code>ACCESS_ADSERVICES_ATTRIBUTION</code>, <code>ACCESS_ADSERVICES_TOPICS</code></td><td>Declared by the Google Mobile Ads SDK for Android's Privacy Sandbox ad APIs (see "Ads" above).</td></tr>
+        <tr><td><code>BIND_GET_INSTALL_REFERRER_SERVICE</code></td><td>Lets Firebase Analytics read from Google Play which store page or campaign the installation came from.</td></tr>
+        <tr><td><code>WAKE_LOCK</code>, <code>FOREGROUND_SERVICE</code></td><td>Declared by Google libraries used by the ad and analytics SDKs to finish short background tasks such as sending queued events. The game itself starts no foreground service.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>The game asks for no location, contacts, camera, microphone, storage or notification permission. It sends no push notifications, shows no review prompt and has no social or sharing features. Links such as this policy open in your browser.</p>
+
+  <h2>Who receives data</h2>
+  <ul>
+    <li>Google (Firebase Analytics, Firebase Remote Config, AdMob and its ad partners where you allow it, and Google Play). Google acts under its own policies: <a href="https://policies.google.com/privacy">Google Privacy Policy</a> · <a href="https://firebase.google.com/support/privacy">Privacy and security in Firebase</a> · <a href="https://policies.google.com/technologies/partner-sites">How Google uses information from sites or apps that use its services</a>.</li>
+    <li>We, Tan Interactive, only see aggregated reports and event data in the Firebase and AdMob consoles. We do not sell personal information and do not receive your payment details.</li>
+    <li>Data sent to Google is encrypted in transit (HTTPS) and may be processed on servers outside your country, including in the United States.</li>
+  </ul>
+
+  <h2>For residents of US states (CCPA/CPRA and similar laws)</h2>
+  <div class="table">
+    <table>
+      <thead><tr><th>Category</th><th>Example</th><th>Received by</th></tr></thead>
+      <tbody>
+        <tr><td>Identifiers</td><td>Firebase app-instance ID, Firebase installation ID, app set ID</td><td>Google (Firebase, AdMob)</td></tr>
+        <tr><td>Internet or other electronic activity</td><td>Game events, ad views and taps</td><td>Google (Firebase, AdMob)</td></tr>
+        <tr><td>Approximate geolocation</td><td>Country or region derived from the IP address</td><td>Google (Firebase, AdMob)</td></tr>
+        <tr><td>Commercial information</td><td>Purchase history (Google Play version only)</td><td>Google Play, Firebase Analytics</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>We do not sell personal information for money. Letting AdMob use identifiers for targeted advertising may count as "sale" or "sharing" under some state laws; you can opt out in Settings › Privacy › Ad privacy choices where your region has that form.</p>
+
+  <h2 id="delete-data">Your rights, data retention and deletion</h2>
+  <ul>
+    <li><strong>Data on your device:</strong> uninstall the game, or open Android Settings › Apps › Seedblade › Storage › Clear storage. This deletes your save and settings at once.</li>
+    <li><strong>Analytics data</strong> is tied to a random app-instance ID, not to your name or email. The game does not show this ID and we have no account to look you up by. Reinstalling the game or clearing its storage creates a new ID, and the old data is no longer linked to your device. Google Analytics deletes event data automatically after the retention period we set (up to 14 months).</li>
+    <li><strong>To ask about or delete data</strong>, email <a href="mailto:taninteractive.dev@gmail.com?subject=Seedblade%20data%20request">taninteractive.dev@gmail.com</a> with the subject "Seedblade data request". We will answer within 30 days and delete whatever we can link to your installation using Google's deletion tools. Because we keep no names or accounts, we may be unable to identify data that belongs to you; in that case clearing the game's storage is the quickest way to cut the link.</li>
+    <li><strong>Ad data</strong> is held by Google under its policies; you can manage it through your Google account and Android's ad settings and by changing your choices in Settings › Privacy › Ad privacy choices.</li>
+    <li>Depending on where you live (for example under the EU GDPR, the UK GDPR, Swiss law or US state laws), you may have the right to access, correct or delete your personal data, to object to or restrict processing, and to withdraw consent at any time. Where the GDPR applies, analytics and remote settings rely on our legitimate interest in running and improving the game, and personalised ads rely on your consent. If you are in the EEA, the UK or Switzerland, you may also complain to your data protection authority.</li>
+  </ul>
+
+  <h2>Security</h2>
+  <p>We keep no player data on servers of our own. Data sent to Google services travels over encrypted connections, and access to our Firebase and AdMob consoles is limited to the studio's own account. No method of storage or transmission is perfectly secure, but we only use well-established Google services and collect as little as the game needs.</p>
+
+  <h2>Children</h2>
+  <p>Seedblade is intended for players aged 13 and over. It is not part of Google Play's Designed for Families programme and is not directed at children under 13. We do not knowingly collect personal information from children under 13. If you believe a child under 13 has used the game, contact us and we will help remove any related data.</p>
+
+  <h2>Changes to this policy</h2>
+  <p>If this policy changes, we will update this page and its "Last updated" date before the version of the game that needs the change is released. Significant changes will also be noted in the store's release notes.</p>
+
+  <h2>Contact</h2>
+  <p>Tan Interactive · <a href="mailto:taninteractive.dev@gmail.com">taninteractive.dev@gmail.com</a> · <a href="https://taninteractive.github.io">taninteractive.github.io</a></p>
+</main>
+</body>
+</html>
