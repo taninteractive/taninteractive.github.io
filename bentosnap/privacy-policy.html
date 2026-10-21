@@ -1,0 +1,167 @@
+<!doctype html>
+<!--
+  Bento Snap: Chopstick Rush — privacy policy (T3.6; GDD §34.3, §46.3, §47; 13+ General Audience, not Designed for Families).
+  Published at https://taninteractive.github.io/bentosnap/privacy-policy.html (APP_CONFIG.privacyUrl in
+  src/config/appConfig.ts; the same URL is in the published AdMob GDPR message "Bento Snap — European regulations"
+  and goes into Play Console and the Amazon Appstore console).
+  This file is the source: copy it byte for byte to taninteractive/taninteractive.github.io as bentosnap/privacy-policy.html
+  after every change (owner gate OG-GH). Keep it in sync with src/meta/adPolicy.ts + src/data/remoteConfig.ts (ad rules
+  and caps), src/meta/storeGate.ts (what each store build sells), src/services/* (AnalyticsManager, MonetizationManager,
+  RemoteConfigManager, BillingManager, HapticsManager), docs/ANALYTICS.md, docs/IAP-PRODUCTS.md, the merged manifest
+  (AD_ID removed and Analytics ad signals denied by tan-core android-setup) and the Data safety answers in
+  docs/STORE-LISTING.md §7.3.
+-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Bento Snap Privacy Policy</title>
+  <meta name="description" content="Privacy policy of Bento Snap: Chopstick Rush, a game by Tan Interactive.">
+  <style>
+    :root { --ink: #3a2438; --paper: #fdf8ef; --accent: #3e8f88; --link: #2b6b65; --rule: #e6d8c2; --soft: #f6ecdc; --th: rgba(62, 143, 136, .13); }
+    * { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; }
+    body { margin: 0; background: var(--paper); color: var(--ink); font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+    main { max-width: 760px; margin: 0 auto; padding: 24px 16px 64px; }
+    h1 { font-size: 1.6rem; line-height: 1.25; margin: 0 0 4px; }
+    h2 { font-size: 1.15rem; margin-top: 2rem; border-bottom: 2px solid var(--accent); padding-bottom: 2px; }
+    p, li, td { overflow-wrap: anywhere; }
+    ul { padding-left: 1.25rem; }
+    li { margin: .25rem 0; }
+    code { font-size: .9em; }
+    .muted { opacity: .78; font-size: .9rem; }
+    .summary { background: var(--soft); border: 1px solid var(--rule); border-radius: 12px; padding: 4px 16px; }
+    .table { overflow-x: auto; }
+    table { border-collapse: collapse; width: 100%; font-size: .95rem; }
+    th, td { border: 1px solid var(--rule); padding: 6px 8px; text-align: left; vertical-align: top; }
+    th { background: var(--th); }
+    a { color: var(--link); }
+    @media (prefers-color-scheme: dark) {
+      :root { --ink: #f3ebe0; --paper: #221a20; --accent: #5fb8af; --link: #8fd6ce; --rule: #4a3a44; --soft: #2d232a; --th: rgba(95, 184, 175, .14); }
+    }
+  </style>
+</head>
+<body>
+<main>
+  <h1>Bento Snap: Chopstick Rush — Privacy Policy</h1>
+  <p class="muted">Tan Interactive · Effective date: 21 October 2026 · Last updated: 21 October 2026 · App id <code>com.taninteractive.bentosnap</code></p>
+
+  <p>Bento Snap: Chopstick Rush ("the game") is made by Tan Interactive, a small independent game studio ("we", "us"). You can reach us at <a href="mailto:taninteractive.dev@gmail.com">taninteractive.dev@gmail.com</a> or <a href="https://taninteractive.github.io">taninteractive.github.io</a>. The game is meant for players aged 13 and over and is not directed at children under 13. This page explains what data the game and the Google services inside it handle, why, and the choices you have. It covers both the Google Play version and the Amazon Appstore version.</p>
+
+  <div class="summary">
+    <p><strong>In short:</strong> no account, no sign-in, no chat and nothing you type is collected. Your progress and purchases are saved only on your phone; we run no servers and keep no player database. Google Firebase counts game events without names or email and sends game settings. Google AdMob shows rewarded ads you choose to watch and an occasional full-screen ad after a won level, after asking for your consent where the law requires it. The game does not request the Android Advertising ID permission. Purchases go through Google Play; the Amazon Appstore version sells nothing for real money.</p>
+  </div>
+
+  <h2>What the game stores on your phone</h2>
+  <ul>
+    <li>Your save: levels cleared, stars, tips and Neat Boxes, Coins, Gems, Glaze and Chest Keys, gear and upgrades, boosters, chests, Daily rewards and Lunch streak, daily tasks, the Lane Pass, Collection stamps, Endless Shift records, Lane Cook-off progress, simple play counters, and a record of what you have bought and received.</li>
+    <li>Your settings: sound, music, vibration, language, text size, left-hand mode, colour-blind icons, big ticket icons, ghost dots, reduce motion, the Kind Counter, and your answers to one-time notes.</li>
+    <li>All of this is kept in the app's own storage on your phone (browser storage inside the app, keys starting with <code>bentosnap_</code>). There is no account and no cloud save, and we never receive it. If you have turned on Android's own device backup, Android may include it in your Google backup under Google's terms.</li>
+    <li><strong>Uninstalling the game or clearing its storage erases it.</strong> On the Google Play version, Restore purchases (in Settings, and automatically when the game starts) brings back one-time purchases: Champion pairs, No Ads and outfit packs. Items used up when delivered, such as Gems, boosters and the contents of packs, bundles, the Monthly card, the Tip Jar and the Lane Pass, exist only in the save on your phone and are lost if you uninstall the game. The game tells you this once in the Shop, and again under Settings › Purchases on this phone.</li>
+    <li>The game has no account, no sign-in, no names, no email, no chat, no free-text input, no online leaderboards (Endless Shift records stay on your phone) and no user-generated content. It does not ask for access to your contacts, photos, files, camera, microphone or location.</li>
+  </ul>
+
+  <h2>Analytics (Google Firebase Analytics)</h2>
+  <ul>
+    <li>Firebase Analytics (Google Analytics for Firebase) records game events so we can balance and improve the game, for example: app opened, screen viewed, level started and finished (won or lost, stars, tips, time, boxes served, customers who walked out, boosters and revives used), tutorial steps, in-game currency earned and spent, chests opened, upgrades, daily rewards and tasks claimed, rewarded ads offered and watched, full-screen ads shown, the revenue reported for each ad shown, and purchase steps in the Shop. Events contain only game ids, numbers and fixed labels, never names, email, advertising IDs, purchase tokens or anything you type.</li>
+    <li>Firebase also collects some data automatically: an app-instance ID (a random identifier created for this installation), the device model, Android version, app version, language, and an approximate location (such as country or region) that Google derives from your IP address. It does not collect your precise location.</li>
+    <li>Analytics is not used for advertising. The game turns Firebase's advertising signals (ad storage, ad user data and ad personalisation) off by default for every player, and it does not request the Android Advertising ID permission.</li>
+    <li><strong>Error reports:</strong> if the game hits an unexpected error it sends one analytics event (<code>app_error</code>, at most 5 per session) with only the place in the game's code and the kind of error. There is no crash-reporting SDK; crash statistics, if any, come from Android itself (Android vitals in Google Play) under Google's policies.</li>
+    <li>We set Google Analytics to keep event data for 14 months; after that Google deletes it automatically.</li>
+  </ul>
+
+  <h2>Remote settings (Google Firebase Remote Config)</h2>
+  <ul>
+    <li>Firebase Remote Config downloads game settings, for example reward sizes, prices in Coins and Gems, how often full-screen ads may appear and daily ad limits, so we can tune the game without an update. Every value is limited to a safe range inside the game; it can never change the rules of a level, make chest odds worse than the odds shown in the game, or raise ad limits above the ones on this page.</li>
+    <li>To do this, Firebase uses a Firebase installation ID (a random identifier for this installation) and the usual technical data of a network request, such as your IP address.</li>
+  </ul>
+
+  <h2>Ads (Google AdMob)</h2>
+  <ul>
+    <li><strong>Rewarded ads are always your choice.</strong> You tap a button to watch one, for example to double your Coins after a win, get Extra time in a shift, get a free booster or Free chest, spin the Daily spin again, collect the Takeaway window twice, refresh the Daily deals, change a daily task, rejoin your Lunch streak, double Lane Cook-off medals, try a Champion pair for one shift or retry the Daily challenge. Each has its own daily limit and there are never more than 20 rewarded ads a day in total. The button only appears when an ad is ready. Chest Keys never come from ads.</li>
+    <li><strong>Full-screen ads between levels</strong> only appear when you leave a won level. Never in your first session, never during a shift, never after a lost level, never right after Extra time or within a minute of a rewarded ad, never before a story scene and never when the app opens; only after level 1-12 is cleared and after 15 minutes of play. By default at most one every third win, at least 150 seconds apart, at most 6 a session and 10 a day (whatever we tune later: never before 10 minutes of play, never more often than every second win, never closer than 2 minutes, never more than 8 a session or 12 a day). <strong>Any purchase in the game turns them off for good.</strong></li>
+    <li>There are no banner ads and no ads when the app opens. Ad content is limited to the Teen rating or lower.</li>
+    <li><strong>Advertising identifiers:</strong> the game does not request the Android Advertising ID permission (<code>com.google.android.gms.permission.AD_ID</code> is removed from the app), so AdMob cannot read your device's Advertising ID. AdMob may still use other device signals, such as the app set ID, your IP address (for approximate location), device and app information, and ad interaction and diagnostic data, to show, limit and measure ads and to prevent fraud. On Android versions that offer it, the Google Mobile Ads SDK declares the Android Privacy Sandbox ad services (<code>ACCESS_ADSERVICES_AD_ID</code>, <code>ACCESS_ADSERVICES_ATTRIBUTION</code>, <code>ACCESS_ADSERVICES_TOPICS</code>), which Google may use as described in its own documentation; you control them in your device's privacy settings.</li>
+    <li>How Google uses data from apps that use its services: <a href="https://policies.google.com/technologies/partner-sites">policies.google.com/technologies/partner-sites</a>. Google's privacy policy: <a href="https://policies.google.com/privacy">policies.google.com/privacy</a>. AdMob and user privacy: <a href="https://support.google.com/admob/answer/6128543">support.google.com/admob/answer/6128543</a>.</li>
+    <li>The Amazon Appstore version shows the same AdMob ads under the same rules.</li>
+  </ul>
+
+  <h2 id="consent">Your consent choices</h2>
+  <ul>
+    <li>Before any ad is requested, the game checks with Google's User Messaging Platform (UMP). Where the law requires consent (for example in the European Economic Area, the United Kingdom and Switzerland), Google's consent message is shown first. You can consent, refuse ("Do not consent") or choose purpose by purpose ("Manage options"). If you refuse, the game still plays in full, with limited, non-personalised ads.</li>
+    <li>In US states with consumer privacy laws, Google's message lets you opt out of the "sale" or "sharing" of your personal information for targeted advertising.</li>
+    <li>You can change your choice at any time: <strong>Settings › Ad privacy choices</strong> (the row appears wherever your region has such a form). Settings › Privacy policy opens this page.</li>
+    <li>You can also reset or delete your device's advertising identifiers and limit ad personalisation in Android's own settings (Settings › Privacy › Ads, or Settings › Google › Ads, depending on the device), and manage personalised ads at <a href="https://adssettings.google.com">adssettings.google.com</a>.</li>
+  </ul>
+
+  <h2>Purchases</h2>
+  <ul>
+    <li><strong>Google Play version:</strong> optional purchases are made through Google Play Billing. Google handles the payment; we never see your card or payment details. The purchase token Google Play returns is checked on your phone to deliver the item and to restore one-time purchases; we run no purchase server. Google Play keeps your purchase history, and Firebase Analytics records each purchase (which item, its price and currency) like any other game event.</li>
+    <li><strong>Amazon Appstore version:</strong> sells nothing for real money. Its Shop has no real-money items; Champion pairs are bought with Gems earned in the game, and the Lane Pass has its free track only.</li>
+    <li>Chests give random items, but they are never sold for real money: the Free chest is free (or comes from a rewarded ad), the Silver chest costs Coins and the Gold chest opens only with a Chest Key earned by playing. Coins, Chest Keys and chests are never sold for real money, and Gems cannot buy chests or Chest Keys. Odds and pity counters are shown on every chest button before you open one. Spins of the Daily spin are free or come from a rewarded ad and are never sold.</li>
+  </ul>
+
+  <h2>Android permissions</h2>
+  <div class="table">
+    <table>
+      <thead><tr><th>Permission</th><th>Why</th></tr></thead>
+      <tbody>
+        <tr><td><code>INTERNET</code>, <code>ACCESS_NETWORK_STATE</code></td><td>Load ads, send analytics events, fetch remote settings, talk to the store. The game itself plays without a connection.</td></tr>
+        <tr><td><code>VIBRATE</code></td><td>Short vibrations during play, only if you turn on Settings › Vibration (off by default).</td></tr>
+        <tr><td><code>com.android.vending.BILLING</code></td><td>Google Play purchases. The Amazon Appstore version never connects to Google Play Billing.</td></tr>
+        <tr><td><code>ACCESS_ADSERVICES_AD_ID</code>, <code>ACCESS_ADSERVICES_ATTRIBUTION</code>, <code>ACCESS_ADSERVICES_TOPICS</code></td><td>Declared by the Google Mobile Ads SDK for Android's Privacy Sandbox ad APIs (see "Ads" above).</td></tr>
+        <tr><td><code>BIND_GET_INSTALL_REFERRER_SERVICE</code></td><td>Lets Firebase Analytics read from Google Play which store page or campaign the installation came from.</td></tr>
+        <tr><td><code>WAKE_LOCK</code>, <code>FOREGROUND_SERVICE</code></td><td>Declared by Google libraries used by the ad and analytics SDKs to finish short background tasks such as sending queued events. The game itself starts no foreground service.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>The game asks for no location, contacts, camera, microphone, storage or notification permission. It sends no push notifications, shows no review prompt and has no social or sharing features. Links such as this policy open in your browser.</p>
+
+  <h2>Who receives data</h2>
+  <ul>
+    <li>Google (Firebase Analytics, Firebase Remote Config, AdMob and its ad partners where you allow it, and Google Play). Google acts under its own policies: <a href="https://policies.google.com/privacy">Google Privacy Policy</a> · <a href="https://firebase.google.com/support/privacy">Privacy and security in Firebase</a> · <a href="https://support.google.com/admob/answer/6128543">AdMob and user privacy</a> · <a href="https://policies.google.com/technologies/partner-sites">How Google uses information from sites or apps that use its services</a>.</li>
+    <li>We, Tan Interactive, only see aggregated reports and event data in the Firebase and AdMob consoles. We do not sell personal information and do not receive your payment details.</li>
+    <li>Data sent to Google is encrypted in transit (HTTPS) and may be processed on servers outside your country, including in the United States.</li>
+  </ul>
+
+  <h2>For residents of US states (CCPA/CPRA and similar laws)</h2>
+  <div class="table">
+    <table>
+      <thead><tr><th>Category</th><th>Example</th><th>Received by</th></tr></thead>
+      <tbody>
+        <tr><td>Identifiers</td><td>Firebase app-instance ID, Firebase installation ID, app set ID</td><td>Google (Firebase, AdMob)</td></tr>
+        <tr><td>Internet or other electronic activity</td><td>Game events, ad views and taps</td><td>Google (Firebase, AdMob)</td></tr>
+        <tr><td>Approximate geolocation</td><td>Country or region derived from the IP address</td><td>Google (Firebase, AdMob)</td></tr>
+        <tr><td>Commercial information</td><td>Purchase history (Google Play version only)</td><td>Google Play, Firebase Analytics</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>We do not sell personal information for money. Letting AdMob use identifiers for targeted advertising may count as "sale" or "sharing" under some state laws; you can opt out in Settings › Ad privacy choices where your region has that form.</p>
+
+  <h2 id="delete-data">Your rights, data retention and deletion</h2>
+  <ul>
+    <li><strong>Data on your phone:</strong> uninstall the game, or open Android Settings › Apps › Bento Snap › Storage › Clear storage (Clear data on some phones). This deletes your save and settings at once.</li>
+    <li><strong>Analytics data</strong> is tied to a random app-instance ID, not to your name or email. We have no account to look you up by. Reinstalling the game or clearing its storage creates a new ID, and the old data is no longer linked to your phone. Google Analytics deletes event data automatically after the 14-month retention period we set.</li>
+    <li><strong>To ask about or delete data</strong>, email <a href="mailto:taninteractive.dev@gmail.com?subject=Bento%20Snap%20data%20request">taninteractive.dev@gmail.com</a> with the subject "Bento Snap data request". We will answer within 30 days and delete whatever we can link to your installation using Google's deletion tools. Because we keep no names or accounts, we may be unable to identify data that belongs to you; in that case clearing the game's storage is the quickest way to cut the link.</li>
+    <li><strong>Ad data</strong> is held by Google under its policies; you can manage it through your Google account, <a href="https://adssettings.google.com">adssettings.google.com</a>, Android's ad settings and Settings › Ad privacy choices in the game.</li>
+    <li>Depending on where you live (for example under the EU GDPR, the UK GDPR, Swiss law or US state laws), you may have the right to access, correct or delete your personal data, to object to or restrict processing, and to withdraw consent at any time. Where the GDPR applies, analytics and remote settings rely on our legitimate interest in running and improving the game, and personalised ads rely on your consent. If you are in the EEA, the UK or Switzerland, you may also complain to your data protection authority.</li>
+  </ul>
+
+  <h2>Security</h2>
+  <p>We keep no player data on servers of our own. Data sent to Google services travels over encrypted connections, and access to our Firebase and AdMob consoles is limited to the studio's own account. No method of storage or transmission is perfectly secure, but we only use well-established Google services and collect as little as the game needs.</p>
+
+  <h2>Children</h2>
+  <p>Bento Snap: Chopstick Rush is intended for players aged 13 and over (a general audience). It is not part of Google Play's Designed for Families programme and is not directed at children under 13. We do not knowingly collect personal information from children under 13. If you believe a child under 13 has used the game, contact us and we will help remove any related data.</p>
+
+  <h2>Links to other services</h2>
+  <p>This page and the game link to Google's own pages (privacy policy, Firebase, AdMob, ad settings). Those services are run by Google under their own privacy policies, which we do not control.</p>
+
+  <h2>Changes to this policy</h2>
+  <p>If this policy changes, we will update this page and its "Last updated" date before the version of the game that needs the change is released. Significant changes will also be noted in the store's release notes.</p>
+
+  <h2>Contact</h2>
+  <p>Tan Interactive · <a href="mailto:taninteractive.dev@gmail.com">taninteractive.dev@gmail.com</a> · <a href="https://taninteractive.github.io">taninteractive.github.io</a></p>
+</main>
+</body>
+</html>
