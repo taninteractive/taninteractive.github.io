@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tan Interactive – Games</title>
+  <meta name="description" content="Bright, bite-sized arcade games for Android by Tan Interactive. Get Hungry Frog: Nom Nom! on Google Play and Amazon Appstore." />
+  <link rel="icon" href="assets/studio-icon.svg" type="image/svg+xml" />
+  <link rel="canonical" href="https://taninteractive.github.io/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Tan Interactive" />
+  <meta property="og:title" content="Tan Interactive – Games" />
+  <meta property="og:description" content="Bright, bite-sized arcade games for Android. Get Hungry Frog: Nom Nom! on Google Play and Amazon Appstore." />
+  <meta property="og:url" content="https://taninteractive.github.io/" />
+  <meta property="og:image" content="https://taninteractive.github.io/assets/hungry-frog/feature-graphic.png" />
+  <meta property="og:image:width" content="1024" />
+  <meta property="og:image:height" content="500" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@500;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --cream: #FFFDF7;
+      --sunrise: #FFEED1;
+      --sky: #BEE3F8;
+      --amber: #F27324;
+      --turquoise: #1EADC2;
+      --leaf: #67B838;
+      --ink: #2A2340;
+      --muted: #5B5470;
+      --card: #FFFFFF;
+      --play: #1E8E3E;
+      --amazon: #FF9900;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: linear-gradient(180deg, var(--sky) 0, var(--cream) 420px, var(--cream) 100%);
+      color: var(--ink);
+      font: 17px/1.55 Nunito, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    }
+    a { color: inherit; }
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 0 16px; }
+
+    header.top { padding: 20px 0 8px; }
+    .brand { display: inline-flex; align-items: center; gap: 12px; text-decoration: none; }
+    .brand img { width: 52px; height: 52px; border-radius: 14px; border: 3px solid var(--ink); background: var(--cream); }
+    .brand span { font: 700 1.5rem/1 Fredoka, sans-serif; letter-spacing: .01em; }
+
+    h1, h2, h3 { font-family: Fredoka, Nunito, sans-serif; line-height: 1.15; margin: 0; }
+
+    /* Featured game */
+    .hero {
+      margin: 20px 0 48px;
+      display: grid; grid-template-columns: 1.15fr 1fr; gap: 28px; align-items: center;
+      background: var(--card);
+      border: 4px solid var(--ink); border-radius: 28px;
+      box-shadow: 0 8px 0 var(--ink);
+      padding: 24px;
+    }
+    .hero video, .hero .poster {
+      width: 100%; aspect-ratio: 16 / 9; display: block; object-fit: cover;
+      border: 3px solid var(--ink); border-radius: 18px; background: var(--sunrise);
+    }
+    .hero .tag {
+      display: inline-block; padding: 4px 12px; border-radius: 999px;
+      background: var(--leaf); color: #fff; font: 700 .85rem/1.4 Nunito, sans-serif;
+      border: 2px solid var(--ink); margin-bottom: 12px;
+    }
+    .hero .title-row { display: flex; gap: 14px; align-items: center; margin-bottom: 10px; }
+    .hero .title-row img { width: 72px; height: 72px; border-radius: 18px; border: 3px solid var(--ink); flex: none; }
+    .hero h1 { font-size: clamp(1.8rem, 4vw, 2.6rem); font-weight: 700; }
+    .hero p { margin: 0 0 18px; color: var(--muted); }
+    .hero ul { margin: 0 0 20px; padding-left: 20px; }
+    .hero li { margin: 2px 0; }
+
+    /* Store buttons */
+    .stores { display: flex; flex-wrap: wrap; gap: 10px; }
+    .store {
+      display: inline-flex; align-items: center; gap: 10px;
+      min-height: 52px; padding: 8px 18px 8px 14px;
+      border: 3px solid var(--ink); border-radius: 16px;
+      background: var(--ink); color: #fff; text-decoration: none;
+      box-shadow: 0 4px 0 rgba(42, 35, 64, .35);
+      transition: transform .12s ease, box-shadow .12s ease;
+    }
+    .store:hover { transform: translateY(-2px); box-shadow: 0 6px 0 rgba(42, 35, 64, .35); }
+    .store:active { transform: translateY(2px); box-shadow: 0 1px 0 rgba(42, 35, 64, .35); }
+    .store:focus-visible { outline: 3px solid var(--amber); outline-offset: 3px; }
+    .store svg { width: 26px; height: 26px; flex: none; }
+    .store small { display: block; font: 700 .7rem/1.1 Nunito, sans-serif; opacity: .8; letter-spacing: .02em; }
+    .store b { display: block; font: 600 1.1rem/1.1 Fredoka, sans-serif; }
+    .store.amazon { background: var(--cream); color: var(--ink); }
+
+    /* Game grids */
+    section.games { margin: 0 0 48px; }
+    section.games h2 { font-size: 1.8rem; margin-bottom: 6px; }
+    section.games > p { margin: 0 0 20px; color: var(--muted); }
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 18px; }
+    .game {
+      display: flex; flex-direction: column; gap: 14px;
+      background: var(--card); border: 3px solid var(--ink); border-radius: 22px;
+      box-shadow: 0 6px 0 var(--ink); padding: 18px;
+      scroll-margin-top: 16px;
+    }
+    .game .head { display: flex; gap: 14px; align-items: center; }
+    .game img { width: 80px; height: 80px; border-radius: 18px; border: 3px solid var(--ink); flex: none; background: var(--sunrise); }
+    .game h3 { font-size: 1.35rem; font-weight: 700; }
+    .game p { margin: 4px 0 0; color: var(--muted); font-size: .98rem; }
+    .game .stores { margin-top: auto; }
+    .game .store { min-height: 48px; padding: 6px 14px 6px 10px; }
+    .game .store b { font-size: 1rem; }
+
+    .soon .game { box-shadow: 0 6px 0 rgba(42, 35, 64, .25); border-color: rgba(42, 35, 64, .55); }
+    .soon .game img { border-color: rgba(42, 35, 64, .55); }
+    .pill {
+      align-self: flex-start; padding: 4px 12px; border-radius: 999px;
+      background: var(--sunrise); border: 2px solid rgba(42, 35, 64, .4);
+      font: 700 .85rem/1.4 Nunito, sans-serif; color: var(--muted);
+    }
+
+    footer { padding: 28px 0 40px; border-top: 3px dashed rgba(42, 35, 64, .25); color: var(--muted); font-size: .95rem; }
+    footer nav { display: flex; flex-wrap: wrap; gap: 6px 16px; margin: 8px 0 12px; }
+    footer a { color: var(--ink); }
+
+    @media (max-width: 760px) {
+      .hero { grid-template-columns: 1fr; padding: 16px; gap: 18px; border-radius: 22px; }
+      .hero .title-row img { width: 60px; height: 60px; }
+      .grid { grid-template-columns: 1fr; }
+      .store { flex: 1 1 200px; justify-content: center; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .store { transition: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="top">
+      <a class="brand" href="./">
+        <img src="assets/studio-icon.svg" alt="" width="52" height="52" />
+        <span>Tan Interactive</span>
+      </a>
+    </header>
+
+    <main>
+      <article class="hero" id="hungry-frog">
+        <video autoplay muted loop playsinline preload="metadata"
+               poster="assets/hungry-frog/trailer-poster.jpg"
+               aria-label="Hungry Frog: Nom Nom! gameplay trailer">
+          <source src="assets/hungry-frog/trailer-720.mp4" type="video/mp4" />
+        </video>
+        <div>
+          <span class="tag">Out now on Android</span>
+          <div class="title-row">
+            <img src="promo/hungry-frog/icon-192.png" alt="" width="72" height="72" />
+            <h1>Hungry Frog: Nom Nom!</h1>
+          </div>
+          <p>Aim your stretchy tongue, snap up bugs and dodge stingers across 15 wild worlds. One finger, endless snacks.</p>
+          <ul>
+            <li>120 levels across 15 worlds</li>
+            <li>A boss waits in every world</li>
+            <li>Legendary frogs with super powers</li>
+          </ul>
+          <div class="stores" data-stores="hungry-frog"></div>
+        </div>
+      </article>
+
+      <section class="games" aria-labelledby="games-title">
+        <h2 id="games-title">Our games</h2>
+        <p>Tap a store button to download.</p>
+        <div class="grid" id="live-games"></div>
+      </section>
+
+      <section class="games soon" aria-labelledby="soon-title" id="soon-section" hidden>
+        <h2 id="soon-title">Coming soon</h2>
+        <p>In testing right now. They land in stores soon.</p>
+        <div class="grid" id="soon-games"></div>
+      </section>
+
+      <noscript>
+        <p>
+          <a href="https://play.google.com/store/apps/details?id=com.taninteractive.hungryfrog">Hungry Frog: Nom Nom! on Google Play</a> ·
+          <a href="https://www.amazon.com/gp/mas/dl/android?p=com.taninteractive.hungryfrog">on Amazon Appstore</a>
+        </p>
+      </noscript>
+    </main>
+
+    <footer>
+      <strong>Tan Interactive</strong> · Indie games for Android.
+      <nav aria-label="Privacy policies" id="privacy-links"></nav>
+      Contact: <a href="mailto:taninteractive.dev@gmail.com">taninteractive.dev@gmail.com</a>
+    </footer>
+  </div>
+
+  <script>
+    (function () {
+      // Same source as the in-game "More games" list: flip `live` in promo/catalog.json and this page follows.
+      var CATALOG = 'promo/catalog.json';
+      var PRIVACY = {
+        'hungry-frog': 'hungry-frog/privacy-policy.html',
+        blotsling: 'blotsling/privacy-policy.html',
+        mossbelly: 'mossbelly/privacy.html',
+        yardlight: 'yardlight/privacy.html',
+        pillowhold: 'pillowhold/privacy-policy.html',
+        ropefall: 'ropefall/privacy-policy.html',
+        tailwallop: 'tailwallop/privacy-policy.html',
+        seedblade: 'seedblade/privacy-policy.html',
+        bentosnap: 'bentosnap/privacy-policy.html'
+      };
+      var ICON = {
+        google: '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#34A853" d="M3.6 2.3 13.4 12l-9.8 9.7c-.4-.2-.6-.6-.6-1.1V3.4c0-.5.2-.9.6-1.1z"/><path fill="#FBBC04" d="m16.8 8.6-3.4 3.4 3.4 3.4 3.9-2.2c.8-.5.8-1.7 0-2.2z"/><path fill="#4285F4" d="M3.6 2.3c.3-.2.8-.2 1.2 0l12 6.3-3.4 3.4z"/><path fill="#EA4335" d="m13.4 12 3.4 3.4-12 6.3c-.4.2-.9.2-1.2 0z"/></svg>',
+        amazon: '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M5 4h14a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1zm2 3v5h10V7z"/><path fill="#FF9900" d="M3 18.2c4.9 2.7 12.6 2.9 18 .2.5-.2.8.3.4.6-5.3 3.4-13.6 3.2-18.7-.2-.4-.3 0-.8.3-.6z"/></svg>'
+      };
+
+      function storeUrl(store, pkg, placement) {
+        if (store === 'google') {
+          var ref = encodeURIComponent('utm_source=website&utm_medium=landing&utm_campaign=' + placement);
+          return 'https://play.google.com/store/apps/details?id=' + pkg + '&referrer=' + ref;
+        }
+        return 'https://www.amazon.com/gp/mas/dl/android?p=' + pkg;
+      }
+
+      function storeButton(store, pkg, placement) {
+        var a = document.createElement('a');
+        a.className = 'store ' + store;
+        a.href = storeUrl(store, pkg, placement);
+        a.target = '_blank';
+        a.rel = 'noopener';
+        a.innerHTML = ICON[store] + (store === 'google'
+          ? '<span><small>GET IT ON</small><b>Google Play</b></span>'
+          : '<span><small>AVAILABLE AT</small><b>Amazon Appstore</b></span>');
+        return a;
+      }
+
+      // Fire tablets have no Play Store, so their visitors see Amazon first.
+      var onFire = /\b(Silk|KF[A-Z]{2,4})\b/.test(navigator.userAgent);
+
+      function liveStores(game) {
+        var order = onFire ? ['amazon', 'google'] : ['google', 'amazon'];
+        return order.filter(function (s) { return game.stores[s] && game.stores[s].live; });
+      }
+
+      function fillStores(el, game, placement) {
+        el.textContent = '';
+        liveStores(game).forEach(function (s) {
+          el.appendChild(storeButton(s, game.stores[s].package, placement));
+        });
+      }
+
+      function card(game, live) {
+        var el = document.createElement('article');
+        el.className = 'game';
+        el.id = game.id;
+        var head = document.createElement('div');
+        head.className = 'head';
+        var img = document.createElement('img');
+        img.src = 'promo/' + game.icon;
+        img.alt = '';
+        img.width = 80; img.height = 80;
+        img.loading = 'lazy';
+        var text = document.createElement('div');
+        var h = document.createElement('h3');
+        h.textContent = game.name.en;
+        var p = document.createElement('p');
+        p.textContent = game.tagline.en;
+        text.append(h, p);
+        head.append(img, text);
+        el.appendChild(head);
+        if (live) {
+          var stores = document.createElement('div');
+          stores.className = 'stores';
+          fillStores(stores, game, 'grid');
+          el.appendChild(stores);
+        } else {
+          var pill = document.createElement('span');
+          pill.className = 'pill';
+          pill.textContent = 'Coming soon';
+          el.appendChild(pill);
+        }
+        return el;
+      }
+
+      function render(catalog) {
+        var liveGrid = document.getElementById('live-games');
+        var soonGrid = document.getElementById('soon-games');
+        var privacy = document.getElementById('privacy-links');
+        catalog.games.forEach(function (game) {
+          if (!game.stores || !game.name || !game.name.en) return;
+          var live = liveStores(game).length > 0;
+          if (game.id === 'hungry-frog') {
+            fillStores(document.querySelector('[data-stores="hungry-frog"]'), game, 'hero');
+          } else {
+            (live ? liveGrid : soonGrid).appendChild(card(game, live));
+          }
+          if (live && PRIVACY[game.id]) {
+            var a = document.createElement('a');
+            a.href = PRIVACY[game.id];
+            a.textContent = game.name.en + ' privacy';
+            privacy.appendChild(a);
+          }
+        });
+        if (!liveGrid.children.length) liveGrid.parentElement.hidden = true;
+        document.getElementById('soon-section').hidden = soonGrid.children.length === 0;
+        if (location.hash) {
+          var target = document.getElementById(location.hash.slice(1));
+          if (target) target.scrollIntoView();
+        }
+      }
+
+      fetch(CATALOG, { cache: 'no-cache' })
+        .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+        .then(render)
+        .catch(function () {
+          render({ games: [{
+            id: 'hungry-frog', name: { en: 'Hungry Frog: Nom Nom!' },
+            stores: {
+              google: { package: 'com.taninteractive.hungryfrog', live: true },
+              amazon: { package: 'com.taninteractive.hungryfrog', live: true }
+            }
+          }] });
+        });
+    })();
+  </script>
+</body>
+</html>
