@@ -4,7 +4,7 @@
   Publish as https://taninteractive.github.io/blotsling/privacy-policy.html (APP_CONFIG.privacyUrl in
   src/config/appConfig.ts; the same URL goes into Play Console and the AdMob privacy messages).
   Keep in sync with the Data safety answers in docs/STORE-LISTING.md, src/meta/adPolicy.ts (ad rules and
-  daily caps), src/meta/chests.ts (drop rates, pity), src/meta/skus.ts (products) and the merged manifest.
+  daily caps), src/services/CrossPromo.ts ("More games"), src/meta/chests.ts (drop rates, pity), src/meta/skus.ts (products) and the merged manifest.
 -->
 <html lang="en">
 <head>
@@ -31,7 +31,7 @@
 <body>
 <main>
   <h1>Blotsling: Fling the Legion — Privacy Policy</h1>
-  <p class="muted">Tan Interactive · Effective 13 October 2026 · App id <code>com.taninteractive.blotsling</code></p>
+  <p class="muted">Tan Interactive · Updated 22 October 2026 (first effective 13 October 2026) · App id <code>com.taninteractive.blotsling</code></p>
 
   <p>Blotsling is a game for players aged 13 and over. It is not directed at children under 13. This page explains what data the game and the Google services it uses handle, why, and the choices you have.</p>
 
@@ -49,6 +49,13 @@
     <li>Analytics event data is kept for at most 14 months.</li>
     <li><strong>Firebase Remote Config</strong> downloads game settings (for example how often ads may appear, daily caps and reward sizes) so we can tune the game without an update. It never changes the rules of a level.</li>
     <li>Crash reports, if any, come from Android itself (Android vitals in Google Play), under Google's policies.</li>
+  </ul>
+
+  <h2>More games</h2>
+  <ul>
+    <li>The title screen has a "More games" button, and after some won leaves a small card may suggest another game by Tan Interactive. To show them, the game downloads the list of our games and their icons from our website (taninteractive.github.io) about once a day and keeps a copy on your device.</li>
+    <li>No personal data is sent with that download: it is a plain request for public files, like opening a web page. Tapping a game only opens its store page; nothing is installed for you.</li>
+    <li>You never get a reward for installing another game. The game counts how often a suggestion is shown and tapped in Firebase Analytics, like the other game events above.</li>
   </ul>
 
   <h2>Ads (Google AdMob)</h2>
