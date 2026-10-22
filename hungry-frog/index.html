@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Hungry Frog: Nom Nom!</title>
+  <link rel="canonical" href="https://taninteractive.github.io/frog/" />
+  <script>
+    // Long alias of the short link /frog. The hop would make /frog see this page as the referrer,
+    // so the original referring host travels along as `ref`.
+    (function () {
+      var q = new URLSearchParams(location.search);
+      try { if (!q.has('ref') && document.referrer) q.set('ref', new URL(document.referrer).hostname); } catch (e) {}
+      var s = q.toString();
+      location.replace('../frog/' + (s ? '?' + s : '') + location.hash);
+    })();
+  </script>
+  <noscript><meta http-equiv="refresh" content="0; url=../frog/" /></noscript>
+</head>
+<body>
+  <a href="../frog/">Hungry Frog: Nom Nom!</a>
+</body>
+</html>
