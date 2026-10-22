@@ -1,0 +1,269 @@
+{
+  "version": 1,
+  "updated": "2026-10-22",
+  "enabled": true,
+  "placements": {
+    "menu": true,
+    "result": true
+  },
+  "games": [
+    {
+      "id": "hungry-frog",
+      "name": {
+        "en": "Hungry Frog: Nom Nom!"
+      },
+      "tagline": {
+        "en": "Aim your tongue, snap up bugs, dodge stingers",
+        "vi": "Phóng lưỡi đớp côn trùng, né ong độc",
+        "es": "Lanza la lengua, atrapa bichos y esquiva aguijones",
+        "pt": "Lance a língua, pegue insetos e fuja dos ferrões",
+        "fr": "Lance ta langue, gobe des insectes, évite les dards",
+        "de": "Zunge zielen, Käfer schnappen, Stacheln ausweichen",
+        "ru": "Целься языком, лови жуков, избегай жал",
+        "ja": "舌をのばして虫をパクッ！針には注意",
+        "ko": "혀를 뻗어 벌레를 냠! 침은 피하세요",
+        "ar": "صوّب لسانك، والتقط الحشرات، وتجنّب اللدغات"
+      },
+      "icon": "hungry-frog/icon-192.png",
+      "stores": {
+        "google": {
+          "package": "com.taninteractive.hungryfrog",
+          "live": true
+        },
+        "amazon": {
+          "package": "com.taninteractive.hungryfrog",
+          "live": true
+        }
+      },
+      "weight": 1
+    },
+    {
+      "id": "blotsling",
+      "name": {
+        "en": "Blotsling"
+      },
+      "tagline": {
+        "en": "Fling your ink knights and crush the orc invasion",
+        "vi": "Phóng hiệp sĩ mực, đập tan đạo quân orc",
+        "es": "Lanza tus caballeros de tinta y aplasta a los orcos",
+        "pt": "Lance seus cavaleiros de tinta e esmague os orcs",
+        "fr": "Lance tes chevaliers d'encre et écrase les orcs",
+        "de": "Schleudere Tintenritter und stoppe die Orks",
+        "ru": "Бросай чернильных рыцарей и громи орков",
+        "ja": "インクの騎士を飛ばしてオークを撃退！",
+        "ko": "잉크 기사를 날려 오크 군단을 물리치세요",
+        "ar": "اقذف فرسان الحبر واسحق غزو الأورك"
+      },
+      "icon": "blotsling/icon-192.png",
+      "stores": {
+        "google": {
+          "package": "com.taninteractive.blotsling",
+          "live": false
+        },
+        "amazon": {
+          "package": "com.taninteractive.blotsling",
+          "live": true
+        }
+      },
+      "weight": 1
+    },
+    {
+      "id": "mossbelly",
+      "name": {
+        "en": "Mossbelly"
+      },
+      "tagline": {
+        "en": "Drag a hungry troll, eat sneaky imps, save the harvest",
+        "vi": "Kéo chú troll háu ăn, nuốt lũ quỷ nhỏ, cứu mùa màng",
+        "es": "Guía a un trol hambriento y salva la cosecha",
+        "pt": "Guie um troll faminto e salve a colheita",
+        "fr": "Guide un troll affamé et sauve la récolte",
+        "de": "Führe einen hungrigen Troll und rette die Ernte",
+        "ru": "Веди голодного тролля и спаси урожай",
+        "ja": "腹ぺこトロールで小鬼を食べて畑を守ろう",
+        "ko": "배고픈 트롤로 꼬마 도깨비를 먹고 수확을 지키세요",
+        "ar": "قُد غولًا جائعًا وأنقذ المحصول"
+      },
+      "icon": "mossbelly/icon-192.png",
+      "stores": {
+        "google": {
+          "package": "com.taninteractive.mossbelly",
+          "live": false
+        },
+        "amazon": {
+          "package": "com.taninteractive.mossbelly",
+          "live": true
+        }
+      },
+      "weight": 1
+    },
+    {
+      "id": "yardlight",
+      "name": {
+        "en": "Yardlight"
+      },
+      "tagline": {
+        "en": "Spin the turntable, your friends shoot, hold till dawn",
+        "vi": "Xoay bàn xoay, bạn bè nổ súng, giữ vững tới bình minh",
+        "es": "Gira la plataforma y resiste hasta el amanecer",
+        "pt": "Gire a plataforma e resista até o amanhecer",
+        "fr": "Tourne la plaque et tiens bon jusqu'à l'aube",
+        "de": "Dreh die Drehscheibe und halte bis zum Morgen",
+        "ru": "Крути поворотный круг и держись до рассвета",
+        "ja": "転車台を回して、夜明けまで守り抜け",
+        "ko": "턴테이블을 돌려 새벽까지 버티세요",
+        "ar": "أدر القرص الدوّار واصمد حتى الفجر"
+      },
+      "icon": "yardlight/icon-192.png",
+      "stores": {
+        "google": {
+          "package": "com.taninteractive.yardlight",
+          "live": false
+        },
+        "amazon": {
+          "package": "com.taninteractive.yardlight",
+          "live": true
+        }
+      },
+      "weight": 1
+    },
+    {
+      "id": "pillowhold",
+      "name": {
+        "en": "Pillowhold"
+      },
+      "tagline": {
+        "en": "Aim the light and hold your pillow fort until dawn",
+        "vi": "Soi đèn và giữ pháo đài gối tới bình minh",
+        "es": "Apunta la luz y defiende tu fuerte de almohadas",
+        "pt": "Mire a luz e defenda seu forte de travesseiros",
+        "fr": "Vise avec la lampe et défends ton fort d'oreillers",
+        "de": "Leuchte mit der Lampe und halte deine Kissenburg",
+        "ru": "Свети фонариком и защити крепость из подушек",
+        "ja": "ライトで照らして、まくらの砦を朝まで守れ",
+        "ko": "빛을 비춰 아침까지 베개 요새를 지키세요",
+        "ar": "وجّه الضوء واحمِ حصن الوسائد حتى الفجر"
+      },
+      "icon": "pillowhold/icon-192.png",
+      "stores": {
+        "google": {
+          "package": "com.taninteractive.pillowhold",
+          "live": false
+        },
+        "amazon": {
+          "package": "com.taninteractive.pillowhold",
+          "live": false
+        }
+      },
+      "weight": 1
+    },
+    {
+      "id": "ropefall",
+      "name": {
+        "en": "Ropefall"
+      },
+      "tagline": {
+        "en": "Swipe the ropes, drop traps, hold the mountain pass",
+        "vi": "Vuốt cắt dây, thả bẫy, giữ vững đèo núi",
+        "es": "Corta las cuerdas, suelta trampas y defiende el paso",
+        "pt": "Corte as cordas, solte armadilhas e defenda a passagem",
+        "fr": "Coupe les cordes, lâche les pièges, tiens le col",
+        "de": "Seile kappen, Fallen lösen, den Pass halten",
+        "ru": "Режь верёвки, сбрасывай ловушки, держи перевал",
+        "ja": "ロープを切ってワナを落とし、峠を守れ",
+        "ko": "밧줄을 끊고 함정을 떨어뜨려 고개를 지키세요",
+        "ar": "اقطع الحبال وأسقط الفخاخ واحمِ الممر الجبلي"
+      },
+      "icon": "ropefall/icon-192.png",
+      "stores": {
+        "google": {
+          "package": "com.taninteractive.ropefall",
+          "live": false
+        }
+      },
+      "weight": 1
+    },
+    {
+      "id": "tailwallop",
+      "name": {
+        "en": "Tailwallop"
+      },
+      "tagline": {
+        "en": "Bonk monsters, grab their tails and swing the herd",
+        "vi": "Cốc quái vật, túm đuôi và quăng cả bầy",
+        "es": "Golpea monstruos, agarra sus colas y gira la manada",
+        "pt": "Acerte monstros, pegue o rabo e gire a manada",
+        "fr": "Assomme les monstres et fais-les tournoyer",
+        "de": "Monster bonken, am Schwanz packen und schleudern",
+        "ru": "Бей монстров, хватай за хвост и раскручивай",
+        "ja": "モンスターをポカッ！しっぽをつかんでブン回せ",
+        "ko": "몬스터를 콩! 꼬리를 잡고 빙빙 돌리세요",
+        "ar": "اضرب الوحوش وأمسك ذيولها ودوّرها"
+      },
+      "icon": "tailwallop/icon-192.png",
+      "stores": {
+        "google": {
+          "package": "com.taninteractive.tailwallop",
+          "live": false
+        },
+        "amazon": {
+          "package": "com.taninteractive.tailwallop",
+          "live": false
+        }
+      },
+      "weight": 1
+    },
+    {
+      "id": "seedblade",
+      "name": {
+        "en": "Seedblade"
+      },
+      "tagline": {
+        "en": "Plant a seed, pluck a weapon, save the grey valley",
+        "vi": "Gieo hạt, nhổ vũ khí, cứu thung lũng xám",
+        "es": "Planta una semilla, arranca un arma y salva el valle",
+        "pt": "Plante uma semente, colha uma arma, salve o vale",
+        "fr": "Plante une graine, cueille une arme, sauve la vallée",
+        "de": "Samen pflanzen, Waffe pflücken, das Tal retten",
+        "ru": "Посади семя, сорви оружие, спаси серую долину",
+        "ja": "種をまいて武器を収穫、灰色の谷を救え",
+        "ko": "씨앗을 심고 무기를 뽑아 회색 골짜기를 구하세요",
+        "ar": "ازرع بذرة واقطف سلاحًا وأنقذ الوادي الرمادي"
+      },
+      "icon": "seedblade/icon-192.png",
+      "stores": {
+        "google": {
+          "package": "com.taninteractive.seedblade",
+          "live": false
+        }
+      },
+      "weight": 1
+    },
+    {
+      "id": "bentosnap",
+      "name": {
+        "en": "Bento Snap"
+      },
+      "tagline": {
+        "en": "Grab the right bites and pack a neat bento box",
+        "vi": "Gắp đúng món, xếp hộp cơm thật gọn",
+        "es": "Atrapa los bocados correctos y arma una caja bento",
+        "pt": "Pegue os petiscos certos e monte uma caixa bento",
+        "fr": "Attrape les bonnes bouchées et prépare un bento",
+        "de": "Greif die richtigen Happen und pack die Bento-Box",
+        "ru": "Хватай нужные кусочки и собери аккуратный бенто",
+        "ja": "正しいおかずをつかんで、きれいなお弁当に",
+        "ko": "알맞은 반찬을 집어 깔끔한 도시락을 싸세요",
+        "ar": "التقط القطع الصحيحة ورتّب علبة بينتو أنيقة"
+      },
+      "icon": "bentosnap/icon-192.png",
+      "stores": {
+        "google": {
+          "package": "com.taninteractive.bentosnap",
+          "live": false
+        }
+      },
+      "weight": 1
+    }
+  ]
+}
