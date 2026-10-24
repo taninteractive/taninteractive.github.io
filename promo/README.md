@@ -29,8 +29,8 @@ An entry that breaks a rule is dropped by the games, never shown half-filled.
 1. Set `stores.<store>.live` to `true` and bump `version`.
 2. Merge. Players see it within 24 h.
 
-Status on 2026-10-22: Google Play production = Hungry Frog only; Amazon live = Hungry Frog, Blotsling,
-Mossbelly, Yardlight (Pillowhold and Tailwallop submitted, still `false` until confirmed live).
+Status on 2026-10-24: Google Play production = Hungry Frog, Pillowhold; Amazon live = Hungry Frog, Blotsling,
+Mossbelly, Yardlight, Pillowhold (Tailwallop submitted, still `false` until confirmed live).
 
 ## Rules (Google Play policy and studio)
 

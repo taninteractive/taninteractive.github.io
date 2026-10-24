@@ -1,6 +1,6 @@
 {
-  "version": 1,
-  "updated": "2026-10-22",
+  "version": 2,
+  "updated": "2026-10-24",
   "enabled": true,
   "placements": {
     "menu": true,
@@ -148,11 +148,11 @@
       "stores": {
         "google": {
           "package": "com.taninteractive.pillowhold",
-          "live": false
+          "live": true
         },
         "amazon": {
           "package": "com.taninteractive.pillowhold",
-          "live": false
+          "live": true
         }
       },
       "weight": 1
