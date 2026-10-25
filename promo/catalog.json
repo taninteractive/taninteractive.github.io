@@ -1,5 +1,5 @@
 {
-  "version": 2,
+  "version": 3,
   "updated": "2026-10-24",
   "enabled": true,
   "placements": {
@@ -260,6 +260,32 @@
       "stores": {
         "google": {
           "package": "com.taninteractive.bentosnap",
+          "live": false
+        }
+      },
+      "weight": 1
+    },
+    {
+      "id": "gushback",
+      "name": {
+        "en": "Gushback"
+      },
+      "tagline": {
+        "en": "Run backwards, spray the costume horde, free the town",
+        "vi": "Chạy lùi, xịt cả đoàn đồ hoá trang, cứu thị trấn",
+        "es": "Corre hacia atrás, moja a los disfraces, salva el pueblo",
+        "pt": "Corra de costas, molhe as fantasias, salve a cidade",
+        "fr": "Recule, arrose les costumes, sauve la ville",
+        "de": "Rückwärts rennen, Kostüme bespritzen, die Stadt retten",
+        "ru": "Беги спиной, обливай костюмы, спаси город",
+        "ja": "後ろ向きに走って着ぐるみに放水、町を救え",
+        "ko": "뒤로 달리며 코스튬 무리에 물을 뿌려 마을을 구하세요",
+        "ar": "اركض للخلف ورشّ الأزياء الحية وأنقذ البلدة"
+      },
+      "icon": "gushback/icon-192.png",
+      "stores": {
+        "google": {
+          "package": "com.taninteractive.gushback",
           "live": false
         }
       },
