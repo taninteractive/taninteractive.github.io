@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pillowhold: Flashlight Fort – on Android</title>
+  <script>
+    // Short link: taninteractive.github.io/pillowhold. Runs before any CSS or font so a phone leaves for
+    // the store at once. Android goes to Google Play, Fire tablets to Amazon; desktop and iPhone stay
+    // on this page (store buttons + QR). `?s=<source>` labels the visit; without it the referring
+    // site is used, and a typed address (what a Shorts viewer does) counts as `direct`.
+    (function () {
+      var PKG = 'com.taninteractive.pillowhold';
+      var q = new URLSearchParams(location.search);
+      function clean(v) { return (v || '').toLowerCase().replace(/[^a-z0-9_-]/g, '').slice(0, 40); }
+      function fromReferrer() {
+        // `ref` is set by an alias page whose hop hides the real referrer (none for Pillowhold yet).
+        var host = (q.get('ref') || '').toLowerCase().replace(/[^a-z0-9.-]/g, '').slice(0, 80);
+        if (!host) try { host = new URL(document.referrer).hostname; } catch (e) { return ''; }
+        var known = {
+          'youtube.com': 'youtube', 'youtu.be': 'youtube', 't.co': 'x', 'x.com': 'x', 'twitter.com': 'x',
+          'instagram.com': 'instagram', 'tiktok.com': 'tiktok', 'facebook.com': 'facebook',
+          'reddit.com': 'reddit', 'discord.com': 'discord', 'google.com': 'google'
+        };
+        for (var d in known) if (host === d || host.slice(-d.length - 1) === '.' + d) return known[d];
+        return host === location.hostname ? '' : clean(host.replace(/\./g, '-'));
+      }
+      var source = clean(q.get('s') || q.get('utm_source')) || fromReferrer() || 'direct';
+      var campaign = clean(q.get('c') || q.get('utm_campaign')) || 'pillowhold';
+      var referrer = 'utm_source=' + source + '&utm_medium=shortlink&utm_campaign=' + campaign;
+      var ua = navigator.userAgent;
+      var fire = /\b(Silk|KF[A-Z]{2,6}|AFT[A-Z]*)\b/.test(ua);
+      var go = window.GO = {
+        fire: fire,
+        android: /Android/i.test(ua) && !fire,
+        ios: /iPhone|iPad|iPod/.test(ua) || (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1),
+        google: 'https://play.google.com/store/apps/details?id=' + PKG + '&referrer=' + encodeURIComponent(referrer),
+        amazon: 'https://www.amazon.com/gp/mas/dl/android?p=' + PKG
+      };
+      // replace() keeps this page out of history, so Back from the store returns to where the
+      // visitor came from. `?stay` previews the page on a phone.
+      if (!q.has('stay') && (go.android || go.fire)) location.replace(go.fire ? go.amazon : go.google);
+    })();
+  </script>
+  <noscript><meta http-equiv="refresh" content="0; url=https://play.google.com/store/apps/details?id=com.taninteractive.pillowhold&amp;referrer=utm_source%3Dnoscript%26utm_medium%3Dshortlink%26utm_campaign%3Dpillowhold" /></noscript>
+  <meta name="description" content="Shine your flashlight on the nightmares and hold your pillow fort until dawn. 48 nights in 6 rooms, a grumpy boss in every room. On Google Play and Amazon Appstore." />
+  <link rel="canonical" href="https://taninteractive.github.io/pillowhold/" />
+  <link rel="icon" href="../promo/pillowhold/icon-192.png" type="image/png" />
+  <meta name="theme-color" content="#1D2452" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Tan Interactive" />
+  <meta property="og:title" content="Pillowhold: Flashlight Fort – on Android" />
+  <meta property="og:description" content="Shine your flashlight on the nightmares and hold your pillow fort until dawn. 48 nights in 6 rooms, a grumpy boss in every room." />
+  <meta property="og:url" content="https://taninteractive.github.io/pillowhold/" />
+  <meta property="og:image" content="https://taninteractive.github.io/assets/pillowhold/feature-graphic.png" />
+  <meta property="og:image:width" content="1024" />
+  <meta property="og:image:height" content="500" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700&family=Nunito:wght@500;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --cream: #FFFDF7;
+      --sunrise: #FFEED1;
+      --sky: #1D2452;
+      --amber: #FFD27A;
+      --leaf: #5A3D8E;
+      --ink: #1D2452;
+      --muted: #5B5470;
+      --card: #FFFFFF;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; min-height: 100vh;
+      background: linear-gradient(180deg, var(--sky) 0, var(--cream) 360px, var(--cream) 100%);
+      color: var(--ink);
+      font: 17px/1.55 Nunito, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      display: flex; align-items: center; justify-content: center; padding: 24px 16px;
+    }
+    h1 { font: 700 clamp(1.7rem, 5vw, 2.3rem)/1.15 Fredoka, Nunito, sans-serif; margin: 0; }
+    .card {
+      width: 100%; max-width: 760px;
+      display: grid; grid-template-columns: 1fr auto; gap: 28px; align-items: center;
+      background: var(--card); border: 4px solid var(--ink); border-radius: 28px;
+      box-shadow: 0 8px 0 var(--ink); padding: 28px;
+    }
+    .head { display: flex; gap: 16px; align-items: center; margin-bottom: 12px; }
+    .head img { width: 84px; height: 84px; border-radius: 20px; border: 3px solid var(--ink); flex: none; }
+    .tag {
+      display: inline-block; padding: 3px 12px; margin-bottom: 8px; border-radius: 999px;
+      background: var(--leaf); color: #fff; border: 2px solid var(--ink);
+      font: 800 .8rem/1.4 Nunito, sans-serif;
+    }
+    p { margin: 0 0 18px; color: var(--muted); }
+    .note {
+      margin: 0 0 18px; padding: 10px 14px; border-radius: 14px;
+      background: var(--sunrise); border: 2px solid rgba(29, 36, 82, .25); color: var(--ink); font-weight: 700;
+    }
+    .stores { display: flex; flex-wrap: wrap; gap: 10px; }
+    .store {
+      display: inline-flex; align-items: center; gap: 10px;
+      min-height: 56px; padding: 8px 20px 8px 14px;
+      border: 3px solid var(--ink); border-radius: 16px;
+      background: var(--ink); color: #fff; text-decoration: none;
+      box-shadow: 0 4px 0 rgba(29, 36, 82, .35);
+      transition: transform .12s ease, box-shadow .12s ease;
+    }
+    .store:hover { transform: translateY(-2px); box-shadow: 0 6px 0 rgba(29, 36, 82, .35); }
+    .store:active { transform: translateY(2px); box-shadow: 0 1px 0 rgba(29, 36, 82, .35); }
+    .store:focus-visible { outline: 3px solid var(--amber); outline-offset: 3px; }
+    .store svg { width: 28px; height: 28px; flex: none; }
+    .store small { display: block; font: 800 .7rem/1.1 Nunito, sans-serif; opacity: .8; letter-spacing: .02em; }
+    .store b { display: block; font: 600 1.15rem/1.1 Fredoka, sans-serif; }
+    .store.amazon { background: var(--cream); color: var(--ink); }
+    .qr { text-align: center; font-weight: 800; font-size: .9rem; color: var(--muted); }
+    .qr img { display: block; width: 184px; height: 184px; margin: 0 auto 8px; border: 3px solid var(--ink); border-radius: 16px; }
+    .more { display: inline-block; margin-top: 16px; color: var(--ink); font-weight: 700; }
+    @media (max-width: 680px) {
+      .card { grid-template-columns: 1fr; padding: 20px; border-radius: 22px; }
+      .head img { width: 68px; height: 68px; }
+      .store { flex: 1 1 220px; justify-content: center; }
+      .qr { display: none; }
+    }
+    @media (prefers-reduced-motion: reduce) { .store { transition: none; } }
+  </style>
+</head>
+<body>
+  <main class="card">
+    <div>
+      <span class="tag">On Android</span>
+      <div class="head">
+        <img src="../promo/pillowhold/icon-192.png" alt="" width="84" height="84" />
+        <h1>Pillowhold: Flashlight Fort</h1>
+      </div>
+      <p>Shine your flashlight on the nightmares and hold your pillow fort until dawn. 48 nights in 6 rooms, a grumpy boss in every room.</p>
+      <p class="note" id="ios-note" hidden>Android only for now. Open this page on an Android phone or Fire tablet.</p>
+      <div class="stores">
+        <a class="store google" id="google" href="https://play.google.com/store/apps/details?id=com.taninteractive.pillowhold" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#34A853" d="M3.6 2.3 13.4 12l-9.8 9.7c-.4-.2-.6-.6-.6-1.1V3.4c0-.5.2-.9.6-1.1z"/><path fill="#FBBC04" d="m16.8 8.6-3.4 3.4 3.4 3.4 3.9-2.2c.8-.5.8-1.7 0-2.2z"/><path fill="#4285F4" d="M3.6 2.3c.3-.2.8-.2 1.2 0l12 6.3-3.4 3.4z"/><path fill="#EA4335" d="m13.4 12 3.4 3.4-12 6.3c-.4.2-.9.2-1.2 0z"/></svg>
+          <span><small>GET IT ON</small><b>Google Play</b></span>
+        </a>
+        <a class="store amazon" id="amazon" href="https://www.amazon.com/gp/mas/dl/android?p=com.taninteractive.pillowhold" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M5 4h14a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1zm2 3v5h10V7z"/><path fill="#FF9900" d="M3 18.2c4.9 2.7 12.6 2.9 18 .2.5-.2.8.3.4.6-5.3 3.4-13.6 3.2-18.7-.2-.4-.3 0-.8.3-.6z"/></svg>
+          <span><small>AVAILABLE AT</small><b>Amazon Appstore</b></span>
+        </a>
+      </div>
+      <a class="more" href="../">More games from Tan Interactive</a>
+    </div>
+    <div class="qr" id="qr">
+      <img src="qr.svg" alt="QR code linking to this page" width="184" height="184" />
+      Scan with your Android phone
+    </div>
+  </main>
+  <script>
+    (function () {
+      var go = window.GO;
+      if (!go) return;
+      var google = document.getElementById('google');
+      var amazon = document.getElementById('amazon');
+      google.href = go.google;
+      amazon.href = go.amazon;
+      if (go.fire) google.parentNode.insertBefore(amazon, google);
+      if (go.ios) document.getElementById('ios-note').hidden = false;
+      // A QR on a phone screen is no use to the person holding it.
+      if (go.ios || go.android || go.fire) document.getElementById('qr').hidden = true;
+    })();
+  </script>
+</body>
+</html>
