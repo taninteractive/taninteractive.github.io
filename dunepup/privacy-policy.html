@@ -1,0 +1,145 @@
+<!doctype html>
+<!--
+  Dunepup — privacy policy (ship-game S8, T3.2; GDD §33, §34, §46, §47; closed Alpha: 13+ General Audience, not Designed for
+  Families — the age screen of D4 / T2.14 comes later and this page must be updated before that build ships).
+  Published at https://taninteractive.github.io/dunepup/privacy-policy.html (APP_CONFIG.privacyUrl in dunepup-game
+  src/config/appConfig.ts; the same URL goes into Play Console and, at ship-game S9b, the AdMob GDPR message).
+  Facts to keep true (dunepup-game): src/meta/adPolicy.ts + src/data/remoteConfig.ts (ad caps and ranges), src/storage/SaveManager.ts
+  (what is saved, vibration off by default), src/services/* (AnalyticsManager, MonetizationManager, RemoteConfigManager, CrossPromo,
+  HapticsManager), no IAP plugin, the merged manifest (VIBRATE, no AD_ID), maxAdContentRating 'T'.
+-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Dunepup Privacy Policy</title>
+  <meta name="description" content="Privacy policy of Dunepup, a game by Tan Interactive.">
+  <style>
+    :root { --ink: #2a2340; --paper: #fffbee; --accent: #6e4ab0; --link: #55378f; --rule: #e8dcc4; --soft: #fff1d6; --th: rgba(110, 74, 176, .12); }
+    * { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; }
+    body { margin: 0; background: var(--paper); color: var(--ink); font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+    main { max-width: 760px; margin: 0 auto; padding: 24px 16px 64px; }
+    h1 { font-size: 1.6rem; line-height: 1.25; margin: 0 0 4px; }
+    h2 { font-size: 1.15rem; margin-top: 2rem; border-bottom: 2px solid var(--accent); padding-bottom: 2px; }
+    p, li, td { overflow-wrap: anywhere; }
+    ul { padding-left: 1.25rem; }
+    li { margin: .25rem 0; }
+    code { font-size: .9em; }
+    .muted { opacity: .78; font-size: .9rem; }
+    .summary { background: var(--soft); border: 1px solid var(--rule); border-radius: 12px; padding: 4px 16px; }
+    .table { overflow-x: auto; }
+    table { border-collapse: collapse; width: 100%; font-size: .95rem; }
+    th, td { border: 1px solid var(--rule); padding: 6px 8px; text-align: left; vertical-align: top; }
+    th { background: var(--th); }
+    a { color: var(--link); }
+    @media (prefers-color-scheme: dark) {
+      :root { --ink: #fff6e3; --paper: #1f1a2e; --accent: #ff8ab0; --link: #c9b6ff; --rule: #463b5e; --soft: #2a2340; --th: rgba(255, 138, 176, .14); }
+    }
+  </style>
+</head>
+<body>
+<main>
+  <h1>Dunepup — Privacy Policy</h1>
+  <p class="muted">Tan Interactive · Effective date: 28 October 2026 · Last updated: 28 October 2026 · App id <code>com.taninteractive.dunepup</code></p>
+
+  <p>Dunepup ("the game") is made by Tan Interactive, a small independent game studio ("we", "us"). You can reach us at <a href="mailto:taninteractive.dev@gmail.com">taninteractive.dev@gmail.com</a> or <a href="https://taninteractive.github.io">taninteractive.github.io</a>. The game is meant for players aged 13 and over and is not directed at children under 13. This page explains what data the game and the Google services inside it handle, why, and the choices you have.</p>
+
+  <div class="summary">
+    <p><strong>In short:</strong> no account, no sign-in, no chat and nothing you type is collected. Your progress is saved only on your phone; we run no servers and keep no player database. Google Firebase counts game events without names or email and sends game settings. Google AdMob shows rewarded ads you choose to watch and an occasional full-screen ad after a won day, after asking for your consent where the law requires it. The game does not request the Android Advertising ID permission and never asks for your location. We do not sell your personal information. The game sells nothing for real money.</p>
+  </div>
+
+  <h2>Data saved on your phone</h2>
+  <ul>
+    <li>Your progress (stars per day, how grown your pangolin is, coins, gems and shards, badges, the gear and perks you own and use, whether you finished the first lesson) and your settings (sound, music, vibration, language) are kept in the app's own storage on your phone (browser storage inside the app, keys starting with <code>dunepup_</code>), together with counters the ad rules need (how many ads were shown today, when the last one was shown).</li>
+    <li>There is no account and no cloud save, and we never receive this data. If you have turned on Android's own device backup, Android may include it in your Google backup under Google's terms. <strong>Uninstalling the game or clearing its storage erases it.</strong></li>
+  </ul>
+
+  <h2>Analytics and remote settings (Google Firebase)</h2>
+  <ul>
+    <li>Firebase Analytics (Google Analytics for Firebase) records game events so we can balance and improve the game, for example: app opened, screen viewed, day started and finished (which day, won or lost, stars, time, a game score), rewarded ads offered and watched, full-screen ads shown, the revenue reported for each ad shown, and taps on "More games" cards. Events contain only game ids, numbers and fixed labels, never names, email, advertising IDs or anything you type.</li>
+    <li>Firebase sends these events with a random app-instance ID and basic device information (model, Android version, app version, language, country or region derived from the IP address). The Android Advertising ID is not collected (the permission is removed from the app), and Analytics is told not to use the data for advertising (ad personalisation and ad user data signals are off).</li>
+    <li>Firebase Remote Config downloads game settings (for example how often a full-screen ad may appear) so we can tune them without an update.</li>
+    <li>If the game crashes or a script error happens, an anonymous error event (where it happened, its type) is counted like any other event.</li>
+  </ul>
+
+  <h2 id="more-games">More games</h2>
+  <ul>
+    <li>The title screen and, now and then, the card after a won day can show a "More games" list of other games made by Tan Interactive. To build it, the game downloads a small public file with the names, short descriptions and icons of our games from our studio website (<a href="https://taninteractive.github.io">taninteractive.github.io</a>, hosted on GitHub Pages) about once a day, and keeps a copy on your phone. The request is a plain download of the same file for every player: no personal data, game progress or identifier is sent with it, though like any web request it carries the usual technical data (such as your IP address) that GitHub, the host, handles under its own privacy policy.</li>
+    <li>Tapping a card opens that game's store page. You never get a reward for installing another game.</li>
+  </ul>
+
+  <h2>Ads (Google AdMob)</h2>
+  <ul>
+    <li><strong>Rewarded ads are always your choice:</strong> a button on the card after a won day can double the coins you earned. If we add other optional bonuses (for example a second chance after a lost day), they work the same way. Nothing happens unless you tap it.</li>
+    <li><strong>Full-screen ads between days</strong> only appear when you leave a won day. Never in the first chapter, never in your first session, never during a day, never after a lost day, never within a minute of a rewarded ad, and never when the app opens; only after 15 minutes of play. By default at most one every third win, at least 150 seconds apart, at most 3 an hour and 8 a day (whatever we tune later: never before 10 minutes of play, never more often than every second win, never closer than 2 minutes, never more than 4 an hour or 12 a day). There are no banner ads.</li>
+    <li>Before ads load, the game asks for your consent with Google's consent form where the law requires it (for example in the EEA, the UK, Switzerland and some US states). You can change your choice at any time with the "Ad privacy choices" button on the title screen (it appears where the form applies). If you do not consent, ads are not personalised; Google may still use limited data to serve and measure ads and to prevent fraud.</li>
+    <li>Ads are limited to content suitable for teens. AdMob and its partners may use identifiers such as the app set ID and data about the ad shown (IP address, device type, ad interactions) under <a href="https://support.google.com/admob/answer/6128543">Google's policies</a>. The Google Mobile Ads SDK can use Android's Privacy Sandbox ad APIs where your phone offers them and you allow them in Android's settings.</li>
+    <li>While this game is in closed testing, its ads are Google's test ads.</li>
+  </ul>
+
+  <h2>Purchases</h2>
+  <p>The game sells nothing for real money. Coins, gems and shards are earned by playing and spent in the game; they cannot be bought, sold or exchanged. There are no paid random items. If we ever add optional purchases, we will update this page first.</p>
+
+  <h2>Android permissions</h2>
+  <div class="table">
+    <table>
+      <thead><tr><th>Permission</th><th>Why</th></tr></thead>
+      <tbody>
+        <tr><td><code>INTERNET</code>, <code>ACCESS_NETWORK_STATE</code></td><td>Load ads, send analytics events, fetch remote settings and the "More games" list. The game itself plays without a connection.</td></tr>
+        <tr><td><code>ACCESS_ADSERVICES_AD_ID</code>, <code>ACCESS_ADSERVICES_ATTRIBUTION</code>, <code>ACCESS_ADSERVICES_TOPICS</code></td><td>Declared by the Google Mobile Ads SDK for Android's Privacy Sandbox ad APIs (see "Ads" above).</td></tr>
+        <tr><td><code>VIBRATE</code></td><td>Short vibrations for hits and rewards, only if you turn Vibration on (it is off when you install the game).</td></tr>
+        <tr><td><code>BIND_GET_INSTALL_REFERRER_SERVICE</code></td><td>Lets Firebase Analytics read from Google Play which store page or campaign the installation came from.</td></tr>
+        <tr><td><code>WAKE_LOCK</code>, <code>FOREGROUND_SERVICE</code></td><td>Declared by Google libraries used by the ad and analytics SDKs to finish short background tasks such as sending queued events. The game itself starts no foreground service.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>The game asks for no location, contacts, camera, microphone, storage or notification permission. It sends no push notifications and has no social or sharing features. Links such as this policy open in your browser.</p>
+
+  <h2>Who receives data</h2>
+  <ul>
+    <li>Google (Firebase Analytics, Firebase Remote Config, AdMob and its ad partners where you allow it). Google acts under its own policies: <a href="https://policies.google.com/privacy">Google Privacy Policy</a> · <a href="https://firebase.google.com/support/privacy">Privacy and security in Firebase</a> · <a href="https://support.google.com/admob/answer/6128543">AdMob and user privacy</a> · <a href="https://policies.google.com/technologies/partner-sites">How Google uses information from sites or apps that use its services</a>.</li>
+    <li>We, Tan Interactive, only see aggregated reports and event data in the Firebase and AdMob consoles. We do not sell personal information and receive no payment details.</li>
+    <li>Data sent to Google is encrypted in transit (HTTPS) and may be processed on servers outside your country, including in the United States.</li>
+  </ul>
+
+  <h2>For residents of US states (CCPA/CPRA and similar laws)</h2>
+  <div class="table">
+    <table>
+      <thead><tr><th>Category</th><th>Example</th><th>Received by</th></tr></thead>
+      <tbody>
+        <tr><td>Identifiers</td><td>Firebase app-instance ID, Firebase installation ID, app set ID</td><td>Google (Firebase, AdMob)</td></tr>
+        <tr><td>Internet or other electronic activity</td><td>Game events, ad views and taps</td><td>Google (Firebase, AdMob)</td></tr>
+        <tr><td>Approximate geolocation</td><td>Country or region derived from the IP address</td><td>Google (Firebase, AdMob)</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>We do not sell personal information for money. Letting AdMob use identifiers for targeted advertising may count as "sale" or "sharing" under some state laws; you can opt out with the "Ad privacy choices" button on the title screen where your region has that form.</p>
+
+  <h2 id="delete-data">Your rights, data retention and deletion</h2>
+  <ul>
+    <li><strong>Data on your phone:</strong> uninstall the game, or open Android Settings › Apps › Dunepup › Storage › Clear storage (Clear data on some phones). This deletes your save and settings at once.</li>
+    <li><strong>Analytics data</strong> is tied to a random app-instance ID, not to your name or email. We have no account to look you up by. Reinstalling the game or clearing its storage creates a new ID, and the old data is no longer linked to your phone. Google Analytics deletes event data automatically after the retention period we set (up to 14 months).</li>
+    <li><strong>To ask about or delete data</strong>, email <a href="mailto:taninteractive.dev@gmail.com?subject=Dunepup%20data%20request">taninteractive.dev@gmail.com</a> with the subject "Dunepup data request". We will answer within 30 days and delete whatever we can link to your installation using Google's deletion tools. Because we keep no names or accounts, we may be unable to identify data that belongs to you; in that case clearing the game's storage is the quickest way to cut the link.</li>
+    <li><strong>Ad data</strong> is held by Google under its policies; you can manage it through your Google account, <a href="https://adssettings.google.com">adssettings.google.com</a>, Android's ad settings and the "Ad privacy choices" button in the game.</li>
+    <li>Depending on where you live (for example under the EU GDPR, the UK GDPR, Swiss law or US state laws), you may have the right to access, correct or delete your personal data, to object to or restrict processing, and to withdraw consent at any time. Where the GDPR applies, analytics and remote settings rely on our legitimate interest in running and improving the game, and personalised ads rely on your consent. If you are in the EEA, the UK or Switzerland, you may also complain to your data protection authority.</li>
+  </ul>
+
+  <h2>Security</h2>
+  <p>We keep no player data on servers of our own. Data sent to Google services travels over encrypted connections, and access to our Firebase and AdMob consoles is limited to the studio's own account. No method of storage or transmission is perfectly secure, but we only use well-established Google services and collect as little as the game needs.</p>
+
+  <h2>Children</h2>
+  <p>Dunepup is intended for players aged 13 and over (a general audience). It is not part of Google Play's Designed for Families programme, is not directed at children under 13 and does not ask for your age. We do not knowingly collect personal information from children under 13. If you believe a child under 13 has used the game, contact us and we will help remove any related data. If we ever open the game to younger players, we will update this page first, and players under 13 would then only get non-personalised, child-directed ads.</p>
+
+  <h2>Links to other services</h2>
+  <p>This page and the game link to Google's own pages (privacy policy, Firebase, AdMob, ad settings) and to store pages of our other games. Those services are run by Google, Amazon and GitHub under their own privacy policies, which we do not control.</p>
+
+  <h2>Changes to this policy</h2>
+  <p>If this policy changes, we will update this page and its "Last updated" date before the version of the game that needs the change is released. Significant changes will also be noted in the store's release notes.</p>
+
+  <h2>Contact</h2>
+  <p>Tan Interactive · <a href="mailto:taninteractive.dev@gmail.com">taninteractive.dev@gmail.com</a> · <a href="https://taninteractive.github.io">taninteractive.github.io</a></p>
+</main>
+</body>
+</html>
