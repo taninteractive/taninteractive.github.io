@@ -1,6 +1,6 @@
 {
-  "version": 3,
-  "updated": "2026-10-24",
+  "version": 4,
+  "updated": "2026-10-28",
   "enabled": true,
   "placements": {
     "menu": true,
@@ -286,6 +286,32 @@
       "stores": {
         "google": {
           "package": "com.taninteractive.gushback",
+          "live": false
+        }
+      },
+      "weight": 1
+    },
+    {
+      "id": "dunepup",
+      "name": {
+        "en": "Dunepup"
+      },
+      "tagline": {
+        "en": "Find shade, curl up, sniff for water, grow in the desert",
+        "vi": "Tìm bóng râm, cuộn tròn, đánh hơi, lớn lên giữa sa mạc",
+        "es": "Busca sombra, hazte bola, olfatea y crece en el desierto",
+        "pt": "Busque sombra, enrole-se, fareje e cresça no deserto",
+        "fr": "Trouve l'ombre, roule-toi en boule, grandis au désert",
+        "de": "Such Schatten, roll dich ein, wachs in der Wüste heran",
+        "ru": "Ищи тень, сворачивайся в клубок и расти в пустыне",
+        "ja": "日陰を探し、丸まって身を守り、砂漠で大きく育とう",
+        "ko": "그늘을 찾고 몸을 말고 냄새를 맡으며 사막에서 자라요",
+        "ar": "ابحث عن الظل وتكوّر واشمم الطريق لتكبر في الصحراء"
+      },
+      "icon": "dunepup/icon-192.png",
+      "stores": {
+        "google": {
+          "package": "com.taninteractive.dunepup",
           "live": false
         }
       },
