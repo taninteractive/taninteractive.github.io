@@ -1,12 +1,12 @@
 <!doctype html>
 <!--
   Tallbough — privacy policy (ship-game S8, T3.1; GDD §33, §34, §46, §47; closed Alpha: 13+ General Audience, not Designed for
-  Families — the age screen of D4 / T2.16 comes later and this page must be updated before that build ships).
+  Families; age screen of D4 / T2.16 live from main 2026-10-28: under 13 -> maxAdContentRating 'G' + TFCD + TFUA (src/meta/audience.ts)).
   Published at https://taninteractive.github.io/tallbough/privacy-policy.html (APP_CONFIG.privacyUrl in tallbough-game
   src/config/appConfig.ts; the same URL goes into Play Console and, at ship-game S9b, the AdMob GDPR message).
   Facts to keep true (tallbough-game): src/meta/adPolicy.ts + src/data/remoteConfig.ts (ad caps and ranges), src/storage/SaveManager.ts
   (what is saved, vibration off by default), src/services/* (AnalyticsManager, MonetizationManager, RemoteConfigManager, CrossPromo,
-  HapticsManager), no IAP plugin, the merged manifest (VIBRATE, no AD_ID), maxAdContentRating 'T'.
+  HapticsManager), no IAP plugin, the merged manifest (VIBRATE, no AD_ID), maxAdContentRating 'T' (13+) / 'G' + child tags (under 13).
 -->
 <html lang="en">
 <head>
@@ -44,15 +44,15 @@
   <h1>Tallbough — Privacy Policy</h1>
   <p class="muted">Tan Interactive · Effective date: 28 October 2026 · Last updated: 28 October 2026 · App id <code>com.taninteractive.tallbough</code></p>
 
-  <p>Tallbough ("the game") is made by Tan Interactive, a small independent game studio ("we", "us"). You can reach us at <a href="mailto:taninteractive.dev@gmail.com">taninteractive.dev@gmail.com</a> or <a href="https://taninteractive.github.io">taninteractive.github.io</a>. The game is meant for players aged 13 and over and is not directed at children under 13. This page explains what data the game and the Google services inside it handle, why, and the choices you have.</p>
+  <p>Tallbough ("the game") is made by Tan Interactive, a small independent game studio ("we", "us"). You can reach us at <a href="mailto:taninteractive.dev@gmail.com">taninteractive.dev@gmail.com</a> or <a href="https://taninteractive.github.io">taninteractive.github.io</a>. The game is meant for players aged 13 and over. The first time it starts, it asks for your year of birth; players who are under 13 only get non-personalised ads suitable for all ages. This page explains what data the game and the Google services inside it handle, why, and the choices you have.</p>
 
   <div class="summary">
-    <p><strong>In short:</strong> no account, no sign-in, no chat and nothing you type is collected. Your progress is saved only on your phone; we run no servers and keep no player database. Google Firebase counts game events without names or email and sends game settings. Google AdMob shows rewarded ads you choose to watch and an occasional full-screen ad after a won level, after asking for your consent where the law requires it. The game does not request the Android Advertising ID permission and never asks for your location. We do not sell your personal information. The game sells nothing for real money.</p>
+    <p><strong>In short:</strong> no account, no sign-in, no chat and nothing you type is collected. Your progress is saved only on your phone; the year of birth you enter on the first screen stays on your phone too and is never sent to us or to Google; we run no servers and keep no player database. Google Firebase counts game events without names or email and sends game settings. Google AdMob shows rewarded ads you choose to watch and an occasional full-screen ad after a won level, after asking for your consent where the law requires it. The game does not request the Android Advertising ID permission and never asks for your location. We do not sell your personal information. The game sells nothing for real money.</p>
   </div>
 
   <h2>Data saved on your phone</h2>
   <ul>
-    <li>Your progress (stars per level, which chapters are open, the friends you met and their hearts, stickers and Bark Notes you found, coins, whether you finished the first lesson) and your settings (sound, music, vibration, language) are kept in the app's own storage on your phone (browser storage inside the app, keys starting with <code>tallbough_</code>), together with counters the ad rules need (how many ads were shown today, when the last one was shown).</li>
+    <li>Your progress (stars per level, which chapters are open, the friends you met and their hearts, stickers and Bark Notes you found, coins, whether you finished the first lesson) and your settings (sound, music, vibration, language) and the year of birth you chose on the first screen (only used on your phone to choose the ad settings below) are kept in the app's own storage on your phone (browser storage inside the app, keys starting with <code>tallbough_</code>), together with counters the ad rules need (how many ads were shown today, when the last one was shown).</li>
     <li>There is no account and no cloud save, and we never receive this data. If you have turned on Android's own device backup, Android may include it in your Google backup under Google's terms. <strong>Uninstalling the game or clearing its storage erases it.</strong></li>
   </ul>
 
@@ -74,8 +74,8 @@
   <ul>
     <li><strong>Rewarded ads are always your choice:</strong> a button on the card after a won level can double the coins you earned. If we add other optional bonuses (for example a second chance after a lost level), they work the same way. Nothing happens unless you tap it.</li>
     <li><strong>Full-screen ads between levels</strong> only appear when you leave a won level. Never in the opening or the first chapter, never in your first session, never during a level, never after a lost level, never within a minute of a rewarded ad, and never when the app opens; only after 15 minutes of play. By default at most one every third win, at least 150 seconds apart, at most 3 an hour and 8 a day (whatever we tune later: never before 10 minutes of play, never more often than every second win, never closer than 2 minutes, never more than 4 an hour or 12 a day). There are no banner ads.</li>
-    <li>Before ads load, the game asks for your consent with Google's consent form where the law requires it (for example in the EEA, the UK, Switzerland and some US states). You can change your choice at any time with the "Ad privacy choices" button on the title screen (it appears where the form applies). If you do not consent, ads are not personalised; Google may still use limited data to serve and measure ads and to prevent fraud.</li>
-    <li>Ads are limited to content suitable for teens. AdMob and its partners may use identifiers such as the app set ID and data about the ad shown (IP address, device type, ad interactions) under <a href="https://support.google.com/admob/answer/6128543">Google's policies</a>. The Google Mobile Ads SDK can use Android's Privacy Sandbox ad APIs where your phone offers them and you allow them in Android's settings.</li>
+    <li>Before ads load, the game asks for your consent with Google's consent form where the law requires it (for example in the EEA, the UK, Switzerland and some US states). You can change your choice at any time with the "Ad privacy choices" button on the title screen (it appears where the form applies). If you do not consent, ads are not personalised; for players under 13 they are never personalised, whatever the answer; Google may still use limited data to serve and measure ads and to prevent fraud.</li>
+    <li>If you are 13 or over, ads are limited to content suitable for teens. If you are under 13, ads are limited to content suitable for all ages (rated G), are never personalised, and every ad request is marked as directed to a child and as coming from someone under the age of consent (Google's child-directed and under-age-of-consent settings). AdMob and its partners may use identifiers such as the app set ID and data about the ad shown (IP address, device type, ad interactions) under <a href="https://support.google.com/admob/answer/6128543">Google's policies</a>. The Google Mobile Ads SDK can use Android's Privacy Sandbox ad APIs where your phone offers them and you allow them in Android's settings.</li>
     <li>While this game is in closed testing, its ads are Google's test ads.</li>
   </ul>
 
@@ -130,7 +130,7 @@
   <p>We keep no player data on servers of our own. Data sent to Google services travels over encrypted connections, and access to our Firebase and AdMob consoles is limited to the studio's own account. No method of storage or transmission is perfectly secure, but we only use well-established Google services and collect as little as the game needs.</p>
 
   <h2>Children</h2>
-  <p>Tallbough is intended for players aged 13 and over (a general audience). It is not part of Google Play's Designed for Families programme, is not directed at children under 13 and does not ask for your age. We do not knowingly collect personal information from children under 13. If you believe a child under 13 has used the game, contact us and we will help remove any related data. If we ever open the game to younger players, we will update this page first, and players under 13 would then only get non-personalised, child-directed ads.</p>
+  <p>Tallbough is intended for players aged 13 and over. It is not part of Google Play's Designed for Families programme. The first time the game starts, it asks for your year of birth with a neutral question (no answer is suggested). The year is stored only on your phone and is never sent to us, to Google or anyone else. If it shows you are under 13, the game only requests non-personalised, child-directed ads rated for all ages, and it never shows offers tuned to you. We do not knowingly collect personal information from children under 13. If you believe a child under 13 has used the game, contact us and we will help remove any related data.</p>
 
   <h2>Links to other services</h2>
   <p>This page and the game link to Google's own pages (privacy policy, Firebase, AdMob, ad settings) and to store pages of our other games. Those services are run by Google, Amazon and GitHub under their own privacy policies, which we do not control.</p>
