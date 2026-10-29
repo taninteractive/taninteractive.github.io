@@ -1,6 +1,6 @@
 {
-  "version": 4,
-  "updated": "2026-10-28",
+  "version": 5,
+  "updated": "2026-10-29",
   "enabled": true,
   "placements": {
     "menu": true,
@@ -88,7 +88,7 @@
       "stores": {
         "google": {
           "package": "com.taninteractive.mossbelly",
-          "live": false
+          "live": true
         },
         "amazon": {
           "package": "com.taninteractive.mossbelly",
@@ -118,7 +118,7 @@
       "stores": {
         "google": {
           "package": "com.taninteractive.yardlight",
-          "live": false
+          "live": true
         },
         "amazon": {
           "package": "com.taninteractive.yardlight",
