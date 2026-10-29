@@ -30,7 +30,7 @@ An entry that breaks a rule is dropped by the games, never shown half-filled.
 2. Merge. Players see it within 24 h.
 
 Status on 2026-10-29: Google Play production = Hungry Frog, Pillowhold, Mossbelly, Yardlight; Amazon live =
-Hungry Frog, Blotsling, Mossbelly, Yardlight, Pillowhold (Tailwallop showed Live in the Amazon console on 2026-10-27, still `false` until the owner confirms the flip).
+Hungry Frog, Blotsling, Mossbelly, Yardlight, Pillowhold, Tailwallop.
 
 ## Rules (Google Play policy and studio)
 

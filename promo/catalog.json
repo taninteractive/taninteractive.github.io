@@ -1,5 +1,5 @@
 {
-  "version": 5,
+  "version": 6,
   "updated": "2026-10-29",
   "enabled": true,
   "placements": {
@@ -208,7 +208,7 @@
         },
         "amazon": {
           "package": "com.taninteractive.tailwallop",
-          "live": false
+          "live": true
         }
       },
       "weight": 1
