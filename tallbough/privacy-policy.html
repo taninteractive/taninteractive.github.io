@@ -1,12 +1,14 @@
 <!doctype html>
 <!--
-  Tallbough — privacy policy (ship-game S8, T3.1; GDD §33, §34, §46, §47; closed Alpha: 13+ General Audience, not Designed for
-  Families; age screen of D4 / T2.16 live from main 2026-10-28: under 13 -> maxAdContentRating 'G' + TFCD + TFUA (src/meta/audience.ts)).
+  Tallbough — privacy policy (ship-game S8, T3.1; GDD §33, §34, §46, §47; audience 9+ under Google Play's Families Policy (D4,
+  STORE-LISTING 5.5/5.7); age screen of D4 / T2.16: year of birth asked once, kept on the phone only, under 13 -> maxAdContentRating
+  'G' + TFCD + TFUA, personalizedOffers false (src/meta/audience.ts); Play Billing IAP of T2.12, Google build only (src/meta/iap.ts)).
   Published at https://taninteractive.github.io/tallbough/privacy-policy.html (APP_CONFIG.privacyUrl in tallbough-game
   src/config/appConfig.ts; the same URL goes into Play Console and, at ship-game S9b, the AdMob GDPR message).
   Facts to keep true (tallbough-game): src/meta/adPolicy.ts + src/data/remoteConfig.ts (ad caps and ranges), src/storage/SaveManager.ts
   (what is saved, vibration off by default), src/services/* (AnalyticsManager, MonetizationManager, RemoteConfigManager, CrossPromo,
-  HapticsManager), no IAP plugin, the merged manifest (VIBRATE, no AD_ID), maxAdContentRating 'T' (13+) / 'G' + child tags (under 13).
+  HapticsManager, IapService, StorePrices), @capgo/native-purchases (Play Billing, Google build only; save iap.owned + iap.tx),
+  the merged manifest (VIBRATE, BILLING on Google only, no AD_ID), maxAdContentRating 'T' (13+) / 'G' + child tags (under 13).
 -->
 <html lang="en">
 <head>
@@ -42,23 +44,23 @@
 <body>
 <main>
   <h1>Tallbough — Privacy Policy</h1>
-  <p class="muted">Tan Interactive · Effective date: 28 October 2026 · Last updated: 28 October 2026 · App id <code>com.taninteractive.tallbough</code></p>
+  <p class="muted">Tan Interactive · Effective date: 28 October 2026 · Last updated: 30 October 2026 · App id <code>com.taninteractive.tallbough</code></p>
 
-  <p>Tallbough ("the game") is made by Tan Interactive, a small independent game studio ("we", "us"). You can reach us at <a href="mailto:taninteractive.dev@gmail.com">taninteractive.dev@gmail.com</a> or <a href="https://taninteractive.github.io">taninteractive.github.io</a>. The game is meant for players aged 13 and over. The first time it starts, it asks for your year of birth; players who are under 13 only get non-personalised ads suitable for all ages. This page explains what data the game and the Google services inside it handle, why, and the choices you have.</p>
+  <p>Tallbough ("the game") is made by Tan Interactive, a small independent game studio ("we", "us"). You can reach us at <a href="mailto:taninteractive.dev@gmail.com">taninteractive.dev@gmail.com</a> or <a href="https://taninteractive.github.io">taninteractive.github.io</a>. The game is made for players aged 9 and over. The first time it starts, it asks once for your year of birth, which stays on your phone; players who are under 13 only get non-personalised, child-directed ads suitable for all ages and never get offers tuned to them. This page explains what data the game and the Google services inside it handle, why, and the choices you have.</p>
 
   <div class="summary">
-    <p><strong>In short:</strong> no account, no sign-in, no chat and nothing you type is collected. Your progress is saved only on your phone; the year of birth you enter on the first screen stays on your phone too and is never sent to us or to Google; we run no servers and keep no player database. Google Firebase counts game events without names or email and sends game settings. Google AdMob shows rewarded ads you choose to watch and an occasional full-screen ad after a won level, after asking for your consent where the law requires it. The game does not request the Android Advertising ID permission and never asks for your location. We do not sell your personal information. The game sells nothing for real money.</p>
+    <p><strong>In short:</strong> no account, no sign-in, no chat and nothing you type is collected. Your progress is saved only on your phone; the year of birth you enter on the first screen stays on your phone too and is never sent to us or to Google; we run no servers and keep no player database. Google Firebase counts game events without names or email and sends game settings. Google AdMob shows rewarded ads you choose to watch and an occasional full-screen ad after a won level, after asking for your consent where the law requires it. The game does not request the Android Advertising ID permission and never asks for your location. We do not sell your personal information. Optional purchases are handled by Google Play; we never see your card or payment details, and the game keeps only the purchase receipt on your phone to deliver and restore what you bought. The Amazon Appstore version sells nothing for real money.</p>
   </div>
 
   <h2>Data saved on your phone</h2>
   <ul>
-    <li>Your progress (stars per level, which chapters are open, the friends you met and their hearts, stickers and Bark Notes you found, coins, whether you finished the first lesson) and your settings (sound, music, vibration, language) and the year of birth you chose on the first screen (only used on your phone to choose the ad settings below) are kept in the app's own storage on your phone (browser storage inside the app, keys starting with <code>tallbough_</code>), together with counters the ad rules need (how many ads were shown today, when the last one was shown).</li>
-    <li>There is no account and no cloud save, and we never receive this data. If you have turned on Android's own device backup, Android may include it in your Google backup under Google's terms. <strong>Uninstalling the game or clearing its storage erases it.</strong></li>
+    <li>Your progress (stars per level, which chapters are open, the friends you met and their hearts, stickers and Bark Notes you found, coins, gems and shards, gear, boosters and Heirlooms, daily rewards, whether you finished the first lesson), the purchases you made in the Google Play version (which product, and the purchase token Google Play returns, so each purchase is delivered once and one-time purchases can be restored) and your settings (sound, music, vibration, language) and the year of birth you chose on the first screen (only used on your phone to choose the ad settings below) are kept in the app's own storage on your phone (browser storage inside the app, keys starting with <code>tallbough_</code>), together with counters the ad rules need (how many ads were shown today, when the last one was shown).</li>
+    <li>There is no account and no cloud save, and we never receive this data. If you have turned on Android's own device backup, Android may include it in your Google backup under Google's terms. <strong>Uninstalling the game or clearing its storage erases it</strong>, including gems bought with real money. Only one-time purchases (the Starter Pack, Ad-Free and the three Heirlooms) can be brought back, with "Restore purchases" in the Shop, because Google Play remembers that you own them.</li>
   </ul>
 
   <h2>Analytics and remote settings (Google Firebase)</h2>
   <ul>
-    <li>Firebase Analytics (Google Analytics for Firebase) records game events so we can balance and improve the game, for example: app opened, screen viewed, level started and finished (which level, won or lost, stars, time, a game score), rewarded ads offered and watched, full-screen ads shown, the revenue reported for each ad shown, and taps on "More games" cards. Events contain only game ids, numbers and fixed labels, never names, email, advertising IDs or anything you type.</li>
+    <li>Firebase Analytics (Google Analytics for Firebase) records game events so we can balance and improve the game, for example: app opened, screen viewed, level started and finished (which level, won or lost, stars, time, a game score), rewarded ads offered and watched, full-screen ads shown, the revenue reported for each ad shown, taps on "More games" cards, and purchases in the Google Play version (which product, its price and currency, and whether it went through, was cancelled or failed; never card or payment details). Events contain only game ids, numbers and fixed labels, never names, email, advertising IDs or anything you type.</li>
     <li>Firebase sends these events with a random app-instance ID and basic device information (model, Android version, app version, language, country or region derived from the IP address). The Android Advertising ID is not collected (the permission is removed from the app), and Analytics is told not to use the data for advertising (ad personalisation and ad user data signals are off).</li>
     <li>Firebase Remote Config downloads game settings (for example how often a full-screen ad may appear) so we can tune them without an update.</li>
     <li>If the game crashes or a script error happens, an anonymous error event (where it happened, its type) is counted like any other event.</li>
@@ -73,14 +75,20 @@
   <h2>Ads (Google AdMob)</h2>
   <ul>
     <li><strong>Rewarded ads are always your choice:</strong> a button on the card after a won level can double the coins you earned. If we add other optional bonuses (for example a second chance after a lost level), they work the same way. Nothing happens unless you tap it.</li>
-    <li><strong>Full-screen ads between levels</strong> only appear when you leave a won level. Never in the opening or the first chapter, never in your first session, never during a level, never after a lost level, never within a minute of a rewarded ad, and never when the app opens; only after 15 minutes of play. By default at most one every third win, at least 150 seconds apart, at most 3 an hour and 8 a day (whatever we tune later: never before 10 minutes of play, never more often than every second win, never closer than 2 minutes, never more than 4 an hour or 12 a day). There are no banner ads.</li>
+    <li><strong>Full-screen ads between levels</strong> only appear when you leave a won level. Never in the opening or the first chapter, never in your first session, never during a level, never after a lost level, never within a minute of a rewarded ad, and never when the app opens; only after 15 minutes of play. Any purchase in the game turns them off for good. By default at most one every third win, at least 150 seconds apart, at most 3 an hour and 8 a day (whatever we tune later: never before 10 minutes of play, never more often than every second win, never closer than 2 minutes, never more than 4 an hour or 12 a day). There are no banner ads.</li>
     <li>Before ads load, the game asks for your consent with Google's consent form where the law requires it (for example in the EEA, the UK, Switzerland and some US states). You can change your choice at any time with the "Ad privacy choices" button on the title screen (it appears where the form applies). If you do not consent, ads are not personalised; for players under 13 they are never personalised, whatever the answer; Google may still use limited data to serve and measure ads and to prevent fraud.</li>
     <li>If you are 13 or over, ads are limited to content suitable for teens. If you are under 13, ads are limited to content suitable for all ages (rated G), are never personalised, and every ad request is marked as directed to a child and as coming from someone under the age of consent (Google's child-directed and under-age-of-consent settings). AdMob and its partners may use identifiers such as the app set ID and data about the ad shown (IP address, device type, ad interactions) under <a href="https://support.google.com/admob/answer/6128543">Google's policies</a>. The Google Mobile Ads SDK can use Android's Privacy Sandbox ad APIs where your phone offers them and you allow them in Android's settings.</li>
     <li>While this game is in closed testing, its ads are Google's test ads.</li>
   </ul>
 
   <h2>Purchases</h2>
-  <p>The game sells nothing for real money. Coins are earned by playing and spent in the game; they cannot be bought, sold or exchanged. There are no paid random items. If we ever add optional purchases, we will update this page first.</p>
+  <ul>
+    <li>On Google Play the game offers optional purchases: gem packs, a Starter Pack, Ad-Free and three Heirlooms. Payment is handled entirely by Google Play under Google's terms; we never receive your card or payment account, and Google Play keeps your purchase history.</li>
+    <li>The game keeps the purchase token on your phone so a purchase is delivered once and one-time purchases can be restored, and it counts purchases (product and price, no payment details) in Firebase Analytics. Any purchase turns off full-screen ads between levels for good.</li>
+    <li>Gems bought with real money are stored only on your phone and are lost if you uninstall the game or clear its storage. One-time purchases (the Starter Pack, Ad-Free and the Heirlooms) can be restored with "Restore purchases" in the Shop.</li>
+    <li>Gold chests can be opened with gems and give a random item; the odds are shown on the chest screen. Coins, gems and other game items cannot be sold or exchanged for real money.</li>
+    <li>Purchases are not available in the Amazon Appstore version.</li>
+  </ul>
 
   <h2>Android permissions</h2>
   <div class="table">
@@ -89,6 +97,7 @@
       <tbody>
         <tr><td><code>INTERNET</code>, <code>ACCESS_NETWORK_STATE</code></td><td>Load ads, send analytics events, fetch remote settings and the "More games" list. The game itself plays without a connection.</td></tr>
         <tr><td><code>ACCESS_ADSERVICES_AD_ID</code>, <code>ACCESS_ADSERVICES_ATTRIBUTION</code>, <code>ACCESS_ADSERVICES_TOPICS</code></td><td>Declared by the Google Mobile Ads SDK for Android's Privacy Sandbox ad APIs (see "Ads" above).</td></tr>
+        <tr><td><code>com.android.vending.BILLING</code></td><td>Google Play version only: lets the game open Google Play's purchase screen and ask Google Play what you already own (for "Restore purchases"). The Amazon Appstore version does not declare it.</td></tr>
         <tr><td><code>VIBRATE</code></td><td>Short vibrations for hits and rewards, only if you turn Vibration on (it is off when you install the game).</td></tr>
         <tr><td><code>BIND_GET_INSTALL_REFERRER_SERVICE</code></td><td>Lets Firebase Analytics read from Google Play which store page or campaign the installation came from.</td></tr>
         <tr><td><code>WAKE_LOCK</code>, <code>FOREGROUND_SERVICE</code></td><td>Declared by Google libraries used by the ad and analytics SDKs to finish short background tasks such as sending queued events. The game itself starts no foreground service.</td></tr>
@@ -99,6 +108,7 @@
 
   <h2>Who receives data</h2>
   <ul>
+    <li>Google Play, when you make a purchase in the Google Play version, under Google's terms and privacy policy.</li>
     <li>Google (Firebase Analytics, Firebase Remote Config, AdMob and its ad partners where you allow it). Google acts under its own policies: <a href="https://policies.google.com/privacy">Google Privacy Policy</a> · <a href="https://firebase.google.com/support/privacy">Privacy and security in Firebase</a> · <a href="https://support.google.com/admob/answer/6128543">AdMob and user privacy</a> · <a href="https://policies.google.com/technologies/partner-sites">How Google uses information from sites or apps that use its services</a>.</li>
     <li>We, Tan Interactive, only see aggregated reports and event data in the Firebase and AdMob consoles. We do not sell personal information and receive no payment details.</li>
     <li>Data sent to Google is encrypted in transit (HTTPS) and may be processed on servers outside your country, including in the United States.</li>
@@ -112,6 +122,7 @@
         <tr><td>Identifiers</td><td>Firebase app-instance ID, Firebase installation ID, app set ID</td><td>Google (Firebase, AdMob)</td></tr>
         <tr><td>Internet or other electronic activity</td><td>Game events, ad views and taps</td><td>Google (Firebase, AdMob)</td></tr>
         <tr><td>Approximate geolocation</td><td>Country or region derived from the IP address</td><td>Google (Firebase, AdMob)</td></tr>
+        <tr><td>Commercial information</td><td>Purchase history (Google Play version only)</td><td>Google Play, Firebase Analytics</td></tr>
       </tbody>
     </table>
   </div>
@@ -119,7 +130,7 @@
 
   <h2 id="delete-data">Your rights, data retention and deletion</h2>
   <ul>
-    <li><strong>Data on your phone:</strong> uninstall the game, or open Android Settings › Apps › Tallbough › Storage › Clear storage (Clear data on some phones). This deletes your save and settings at once.</li>
+    <li><strong>Data on your phone:</strong> uninstall the game, or open Android Settings › Apps › Tallbough › Storage › Clear storage (Clear data on some phones). This deletes your save and settings at once, including gems bought with real money; one-time purchases can be restored later with "Restore purchases" in the Shop.</li>
     <li><strong>Analytics data</strong> is tied to a random app-instance ID, not to your name or email. We have no account to look you up by. Reinstalling the game or clearing its storage creates a new ID, and the old data is no longer linked to your phone. Google Analytics deletes event data automatically after the retention period we set (up to 14 months).</li>
     <li><strong>To ask about or delete data</strong>, email <a href="mailto:taninteractive.dev@gmail.com?subject=Tallbough%20data%20request">taninteractive.dev@gmail.com</a> with the subject "Tallbough data request". We will answer within 30 days and delete whatever we can link to your installation using Google's deletion tools. Because we keep no names or accounts, we may be unable to identify data that belongs to you; in that case clearing the game's storage is the quickest way to cut the link.</li>
     <li><strong>Ad data</strong> is held by Google under its policies; you can manage it through your Google account, <a href="https://adssettings.google.com">adssettings.google.com</a>, Android's ad settings and the "Ad privacy choices" button in the game.</li>
@@ -130,7 +141,7 @@
   <p>We keep no player data on servers of our own. Data sent to Google services travels over encrypted connections, and access to our Firebase and AdMob consoles is limited to the studio's own account. No method of storage or transmission is perfectly secure, but we only use well-established Google services and collect as little as the game needs.</p>
 
   <h2>Children</h2>
-  <p>Tallbough is intended for players aged 13 and over. It is not part of Google Play's Designed for Families programme. The first time the game starts, it asks for your year of birth with a neutral question (no answer is suggested). The year is stored only on your phone and is never sent to us, to Google or anyone else. If it shows you are under 13, the game only requests non-personalised, child-directed ads rated for all ages, and it never shows offers tuned to you. We do not knowingly collect personal information from children under 13. If you believe a child under 13 has used the game, contact us and we will help remove any related data.</p>
+  <p>Tallbough is made for players aged 9 and over, and the game follows Google Play's Families Policy. The first time the game starts, it asks once for your year of birth with a neutral question (no answer is suggested). The year is stored only on your phone and is never sent to us, to Google or anyone else. If it shows you are under 13, every ad request is non-personalised, marked as child-directed and limited to ads rated for all ages, and the game never shows offers tuned to you. The only ad SDK in the game is Google AdMob, which is certified for Families apps, and the game never reads the Android Advertising ID. For players under 13 we collect no personal information beyond the anonymous game events and device identifiers described above, which are used only to run, improve and protect the game and never for advertising. If you believe a child under 13 has used the game, contact us and we will help remove any related data.</p>
 
   <h2>Links to other services</h2>
   <p>This page and the game link to Google's own pages (privacy policy, Firebase, AdMob, ad settings) and to store pages of our other games. Those services are run by Google, Amazon and GitHub under their own privacy policies, which we do not control.</p>
