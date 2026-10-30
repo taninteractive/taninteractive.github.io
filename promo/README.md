@@ -19,7 +19,7 @@ reaches players within a day, without an app update.
 | `games[].name` | Card title per language, `en` required, ≤ 30 characters |
 | `games[].tagline` | One line per language, `en` required, ≤ 60 characters; a missing language falls back to `en` |
 | `games[].icon` | Relative to this folder (`<id>/icon-192.png`), 192×192 PNG from the game's 512 store icon |
-| `games[].stores.google/amazon` | `package` and `live`. **`live: true` only when the game is public in that store**: Play production (never closed or open testing), Amazon live |
+| `games[].stores.google/amazon` | `package` and `live`. **`live: true` only when the game is public in that store**: Play production (never closed or open testing), Amazon live. `amazon` is read only by the in-game "More games" of the Amazon builds (Amazon apps may only link to Amazon); the website and every other promo use `google` alone |
 | `games[].weight` | Relative chance to be picked (default 1) |
 
 An entry that breaks a rule is dropped by the games, never shown half-filled.

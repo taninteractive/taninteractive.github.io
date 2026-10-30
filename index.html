@@ -4,13 +4,13 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Tan Interactive – Games</title>
-  <meta name="description" content="Bright, bite-sized arcade games for Android by Tan Interactive. Get Hungry Frog: Nom Nom! on Google Play and Amazon Appstore." />
+  <meta name="description" content="Bright, bite-sized arcade games for Android by Tan Interactive. Get Hungry Frog: Nom Nom! on Google Play." />
   <link rel="icon" href="assets/studio-icon.svg" type="image/svg+xml" />
   <link rel="canonical" href="https://taninteractive.github.io/" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Tan Interactive" />
   <meta property="og:title" content="Tan Interactive – Games" />
-  <meta property="og:description" content="Bright, bite-sized arcade games for Android. Get Hungry Frog: Nom Nom! on Google Play and Amazon Appstore." />
+  <meta property="og:description" content="Bright, bite-sized arcade games for Android. Get Hungry Frog: Nom Nom! on Google Play." />
   <meta property="og:url" content="https://taninteractive.github.io/" />
   <meta property="og:image" content="https://taninteractive.github.io/assets/hungry-frog/feature-graphic.png" />
   <meta property="og:image:width" content="1024" />
@@ -31,7 +31,6 @@
       --muted: #5B5470;
       --card: #FFFFFF;
       --play: #1E8E3E;
-      --amazon: #FF9900;
     }
     * { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
@@ -92,7 +91,6 @@
     .store svg { width: 26px; height: 26px; flex: none; }
     .store small { display: block; font: 700 .7rem/1.1 Nunito, sans-serif; opacity: .8; letter-spacing: .02em; }
     .store b { display: block; font: 600 1.1rem/1.1 Fredoka, sans-serif; }
-    .store.amazon { background: var(--cream); color: var(--ink); }
 
     /* Game grids */
     section.games { margin: 0 0 48px; }
@@ -183,8 +181,7 @@
 
       <noscript>
         <p>
-          <a href="https://play.google.com/store/apps/details?id=com.taninteractive.hungryfrog">Hungry Frog: Nom Nom! on Google Play</a> ·
-          <a href="https://www.amazon.com/gp/mas/dl/android?p=com.taninteractive.hungryfrog">on Amazon Appstore</a>
+          <a href="https://play.google.com/store/apps/details?id=com.taninteractive.hungryfrog">Hungry Frog: Nom Nom! on Google Play</a>
         </p>
       </noscript>
     </main>
@@ -213,43 +210,38 @@
         stickaboo: 'stickaboo/privacy-policy.html'
       };
       var ICON = {
-        google: '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#34A853" d="M3.6 2.3 13.4 12l-9.8 9.7c-.4-.2-.6-.6-.6-1.1V3.4c0-.5.2-.9.6-1.1z"/><path fill="#FBBC04" d="m16.8 8.6-3.4 3.4 3.4 3.4 3.9-2.2c.8-.5.8-1.7 0-2.2z"/><path fill="#4285F4" d="M3.6 2.3c.3-.2.8-.2 1.2 0l12 6.3-3.4 3.4z"/><path fill="#EA4335" d="m13.4 12 3.4 3.4-12 6.3c-.4.2-.9.2-1.2 0z"/></svg>',
-        amazon: '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M5 4h14a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1zm2 3v5h10V7z"/><path fill="#FF9900" d="M3 18.2c4.9 2.7 12.6 2.9 18 .2.5-.2.8.3.4.6-5.3 3.4-13.6 3.2-18.7-.2-.4-.3 0-.8.3-.6z"/></svg>'
+        google: '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#34A853" d="M3.6 2.3 13.4 12l-9.8 9.7c-.4-.2-.6-.6-.6-1.1V3.4c0-.5.2-.9.6-1.1z"/><path fill="#FBBC04" d="m16.8 8.6-3.4 3.4 3.4 3.4 3.9-2.2c.8-.5.8-1.7 0-2.2z"/><path fill="#4285F4" d="M3.6 2.3c.3-.2.8-.2 1.2 0l12 6.3-3.4 3.4z"/><path fill="#EA4335" d="m13.4 12 3.4 3.4-12 6.3c-.4.2-.9.2-1.2 0z"/></svg>'
       };
 
-      function storeUrl(store, pkg, placement) {
-        if (store === 'google') {
-          var ref = encodeURIComponent('utm_source=website&utm_medium=landing&utm_campaign=' + placement);
-          return 'https://play.google.com/store/apps/details?id=' + pkg + '&referrer=' + ref;
-        }
-        return 'https://www.amazon.com/gp/mas/dl/android?p=' + pkg;
+      // Studio promo links only to Google Play. `stores.amazon` in the catalog is read by the in-game
+      // "More games" of the Amazon builds alone (Amazon apps may only link to Amazon).
+      function storeUrl(pkg, placement) {
+        var ref = encodeURIComponent('utm_source=website&utm_medium=landing&utm_campaign=' + placement);
+        return 'https://play.google.com/store/apps/details?id=' + pkg + '&referrer=' + ref;
       }
 
-      function storeButton(store, pkg, placement) {
+      function storeButton(pkg, placement) {
         var a = document.createElement('a');
-        a.className = 'store ' + store;
-        a.href = storeUrl(store, pkg, placement);
+        a.className = 'store google';
+        a.href = storeUrl(pkg, placement);
         a.target = '_blank';
         a.rel = 'noopener';
-        a.innerHTML = ICON[store] + (store === 'google'
-          ? '<span><small>GET IT ON</small><b>Google Play</b></span>'
-          : '<span><small>AVAILABLE AT</small><b>Amazon Appstore</b></span>');
+        a.innerHTML = ICON.google + '<span><small>GET IT ON</small><b>Google Play</b></span>';
         return a;
       }
 
-      // Fire tablets have no Play Store, so their visitors see Amazon first.
-      var onFire = /\b(Silk|KF[A-Z]{2,4})\b/.test(navigator.userAgent);
+      function onPlay(game) {
+        return !!(game.stores.google && game.stores.google.live);
+      }
 
-      function liveStores(game) {
-        var order = onFire ? ['amazon', 'google'] : ['google', 'amazon'];
-        return order.filter(function (s) { return game.stores[s] && game.stores[s].live; });
+      // Privacy links stay up for every game public in any store (store listings point at them).
+      function isPublic(game) {
+        return Object.keys(game.stores).some(function (s) { return game.stores[s] && game.stores[s].live; });
       }
 
       function fillStores(el, game, placement) {
         el.textContent = '';
-        liveStores(game).forEach(function (s) {
-          el.appendChild(storeButton(s, game.stores[s].package, placement));
-        });
+        if (onPlay(game)) el.appendChild(storeButton(game.stores.google.package, placement));
       }
 
       function card(game, live) {
@@ -291,13 +283,13 @@
         var privacy = document.getElementById('privacy-links');
         catalog.games.forEach(function (game) {
           if (!game.stores || !game.name || !game.name.en) return;
-          var live = liveStores(game).length > 0;
+          var live = onPlay(game);
           if (game.id === 'hungry-frog') {
             fillStores(document.querySelector('[data-stores="hungry-frog"]'), game, 'hero');
           } else {
             (live ? liveGrid : soonGrid).appendChild(card(game, live));
           }
-          if (live && PRIVACY[game.id]) {
+          if (isPublic(game) && PRIVACY[game.id]) {
             var a = document.createElement('a');
             a.href = PRIVACY[game.id];
             a.textContent = game.name.en + ' privacy';
@@ -319,8 +311,7 @@
           render({ games: [{
             id: 'hungry-frog', name: { en: 'Hungry Frog: Nom Nom!' },
             stores: {
-              google: { package: 'com.taninteractive.hungryfrog', live: true },
-              amazon: { package: 'com.taninteractive.hungryfrog', live: true }
+              google: { package: 'com.taninteractive.hungryfrog', live: true }
             }
           }] });
         });
