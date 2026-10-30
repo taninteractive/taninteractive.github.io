@@ -6,8 +6,8 @@
   <title>Hungry Frog: Nom Nom! – Free on Android</title>
   <script>
     // Short link: taninteractive.github.io/frog. Runs before any CSS or font so a phone leaves for
-    // the store at once. Android goes to Google Play, Fire tablets to Amazon; desktop and iPhone stay
-    // on this page (store buttons + QR). `?s=<source>` labels the visit; without it the referring
+    // the store at once. Android goes to Google Play; desktop and iPhone stay on this
+    // page (store buttons + QR). `?s=<source>` labels the visit; without it the referring
     // site is used, and a typed address (what a Shorts viewer does) counts as `direct`.
     (function () {
       var PKG = 'com.taninteractive.hungryfrog';
@@ -29,21 +29,18 @@
       var campaign = clean(q.get('c') || q.get('utm_campaign')) || 'hungry-frog';
       var referrer = 'utm_source=' + source + '&utm_medium=shortlink&utm_campaign=' + campaign;
       var ua = navigator.userAgent;
-      var fire = /\b(Silk|KF[A-Z]{2,6}|AFT[A-Z]*)\b/.test(ua);
       var go = window.GO = {
-        fire: fire,
-        android: /Android/i.test(ua) && !fire,
+        android: /Android/i.test(ua),
         ios: /iPhone|iPad|iPod/.test(ua) || (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1),
-        google: 'https://play.google.com/store/apps/details?id=' + PKG + '&referrer=' + encodeURIComponent(referrer),
-        amazon: 'https://www.amazon.com/gp/mas/dl/android?p=' + PKG
+        google: 'https://play.google.com/store/apps/details?id=' + PKG + '&referrer=' + encodeURIComponent(referrer)
       };
       // replace() keeps this page out of history, so Back from the store returns to where the
       // visitor came from. `?stay` previews the page on a phone.
-      if (!q.has('stay') && (go.android || go.fire)) location.replace(go.fire ? go.amazon : go.google);
+      if (!q.has('stay') && go.android) location.replace(go.google);
     })();
   </script>
   <noscript><meta http-equiv="refresh" content="0; url=https://play.google.com/store/apps/details?id=com.taninteractive.hungryfrog&amp;referrer=utm_source%3Dnoscript%26utm_medium%3Dshortlink%26utm_campaign%3Dhungry-frog" /></noscript>
-  <meta name="description" content="Aim your stretchy tongue, snap up bugs and dodge stingers across 15 wild worlds. Free on Google Play and Amazon Appstore." />
+  <meta name="description" content="Aim your stretchy tongue, snap up bugs and dodge stingers across 15 wild worlds. Free on Google Play." />
   <link rel="canonical" href="https://taninteractive.github.io/frog/" />
   <link rel="icon" href="../promo/hungry-frog/icon-192.png" type="image/png" />
   <meta name="theme-color" content="#BEE3F8" />
@@ -112,7 +109,6 @@
     .store svg { width: 28px; height: 28px; flex: none; }
     .store small { display: block; font: 800 .7rem/1.1 Nunito, sans-serif; opacity: .8; letter-spacing: .02em; }
     .store b { display: block; font: 600 1.15rem/1.1 Fredoka, sans-serif; }
-    .store.amazon { background: var(--cream); color: var(--ink); }
     .qr { text-align: center; font-weight: 800; font-size: .9rem; color: var(--muted); }
     .qr img { display: block; width: 184px; height: 184px; margin: 0 auto 8px; border: 3px solid var(--ink); border-radius: 16px; }
     .more { display: inline-block; margin-top: 16px; color: var(--ink); font-weight: 700; }
@@ -134,15 +130,11 @@
         <h1>Hungry Frog: Nom Nom!</h1>
       </div>
       <p>Aim your stretchy tongue, snap up bugs and dodge stingers across 15 wild worlds. 120 levels, a boss in every world.</p>
-      <p class="note" id="ios-note" hidden>Android only for now. Open this page on an Android phone or Fire tablet.</p>
+      <p class="note" id="ios-note" hidden>Android only for now. Open this page on an Android phone.</p>
       <div class="stores">
         <a class="store google" id="google" href="https://play.google.com/store/apps/details?id=com.taninteractive.hungryfrog" rel="noopener">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#34A853" d="M3.6 2.3 13.4 12l-9.8 9.7c-.4-.2-.6-.6-.6-1.1V3.4c0-.5.2-.9.6-1.1z"/><path fill="#FBBC04" d="m16.8 8.6-3.4 3.4 3.4 3.4 3.9-2.2c.8-.5.8-1.7 0-2.2z"/><path fill="#4285F4" d="M3.6 2.3c.3-.2.8-.2 1.2 0l12 6.3-3.4 3.4z"/><path fill="#EA4335" d="m13.4 12 3.4 3.4-12 6.3c-.4.2-.9.2-1.2 0z"/></svg>
           <span><small>GET IT ON</small><b>Google Play</b></span>
-        </a>
-        <a class="store amazon" id="amazon" href="https://www.amazon.com/gp/mas/dl/android?p=com.taninteractive.hungryfrog" rel="noopener">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M5 4h14a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1zm2 3v5h10V7z"/><path fill="#FF9900" d="M3 18.2c4.9 2.7 12.6 2.9 18 .2.5-.2.8.3.4.6-5.3 3.4-13.6 3.2-18.7-.2-.4-.3 0-.8.3-.6z"/></svg>
-          <span><small>AVAILABLE AT</small><b>Amazon Appstore</b></span>
         </a>
       </div>
       <a class="more" href="../">More games from Tan Interactive</a>
@@ -157,13 +149,10 @@
       var go = window.GO;
       if (!go) return;
       var google = document.getElementById('google');
-      var amazon = document.getElementById('amazon');
       google.href = go.google;
-      amazon.href = go.amazon;
-      if (go.fire) google.parentNode.insertBefore(amazon, google);
       if (go.ios) document.getElementById('ios-note').hidden = false;
       // A QR on a phone screen is no use to the person holding it.
-      if (go.ios || go.android || go.fire) document.getElementById('qr').hidden = true;
+      if (go.ios || go.android) document.getElementById('qr').hidden = true;
     })();
   </script>
 </body>
