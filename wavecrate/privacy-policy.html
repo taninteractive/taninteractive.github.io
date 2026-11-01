@@ -1,0 +1,112 @@
+<!doctype html>
+<!--
+  Wavecrate — privacy policy (offline music player, package com.taninteractive.song).
+  Published at https://taninteractive.github.io/wavecrate/privacy-policy.html; the same URL goes into Play Console.
+  Source of truth: song_player/docs/privacy-policy.html in taninteractive/wavecrate (copy byte for byte).
+  Facts to keep true: no INTERNET permission, no analytics/ads/crash SDK, android:allowBackup="false",
+  data in the app's SQLite database (lib/data/db), sync/backup only to a file the user picks (lib/app/sync_controller.dart),
+  tag edits only after Android's own write prompt (lib/services/tag_edit_service.dart).
+-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Wavecrate Privacy Policy</title>
+  <meta name="description" content="Privacy policy of Wavecrate, an offline music player by Tan Interactive.">
+  <style>
+    :root { --ink: #23201f; --paper: #fff8f3; --accent: #e8693c; --link: #b54a22; --rule: #f0dccf; --soft: #ffeee4; --th: rgba(232, 105, 60, .12); }
+    * { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; }
+    body { margin: 0; background: var(--paper); color: var(--ink); font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+    main { max-width: 760px; margin: 0 auto; padding: 24px 16px 64px; }
+    h1 { font-size: 1.6rem; line-height: 1.25; margin: 0 0 4px; }
+    h2 { font-size: 1.15rem; margin-top: 2rem; border-bottom: 2px solid var(--accent); padding-bottom: 2px; }
+    p, li, td { overflow-wrap: anywhere; }
+    ul { padding-left: 1.25rem; }
+    li { margin: .25rem 0; }
+    code { font-size: .9em; }
+    .muted { opacity: .78; font-size: .9rem; }
+    .summary { background: var(--soft); border: 1px solid var(--rule); border-radius: 12px; padding: 4px 16px; }
+    .table { overflow-x: auto; }
+    table { border-collapse: collapse; width: 100%; font-size: .95rem; }
+    th, td { border: 1px solid var(--rule); padding: 6px 8px; text-align: left; vertical-align: top; }
+    th { background: var(--th); }
+    a { color: var(--link); }
+    @media (prefers-color-scheme: dark) {
+      :root { --ink: #fbefe8; --paper: #1d1917; --accent: #ff8a5c; --link: #ffb08f; --rule: #4a3c35; --soft: #2a2320; --th: rgba(255, 138, 92, .14); }
+    }
+  </style>
+</head>
+<body>
+<main>
+  <h1>Wavecrate — Privacy Policy</h1>
+  <p class="muted">Tan Interactive · Effective date: 31 October 2026 · Last updated: 31 October 2026 · App id <code>com.taninteractive.song</code></p>
+
+  <p>Wavecrate ("the app") is an offline music player made by Tan Interactive, a small independent studio ("we", "us"). You can reach us at <a href="mailto:taninteractive.dev@gmail.com">taninteractive.dev@gmail.com</a> or <a href="https://taninteractive.github.io">taninteractive.github.io</a>. This page explains what the app does with your data and the choices you have.</p>
+
+  <div class="summary">
+    <p><strong>In short:</strong> Wavecrate plays the music files already on your phone. It has no account, no ads, no analytics and no tracking, and it does not even have Android's permission to use the internet. Everything it keeps (your library, playlists, favorites, play counts and settings) stays on your phone. We never receive any of it. If you turn on sync or make a backup, the app writes a file only to the place you choose.</p>
+  </div>
+
+  <h2>Data the app keeps on your phone</h2>
+  <ul>
+    <li><strong>Library index:</strong> to show your songs, albums, artists, genres and folders quickly, the app reads the details Android already knows about your audio files (title, artist, album, genre, year, track number, duration, file name, folder and size) and stores a copy in its own private database. Album art is cached in the app's private storage.</li>
+    <li><strong>Your own data:</strong> playlists (stored as song title and artist, so they survive moving files), favorites, play counts and when a song was last played, the playback queue and position, equalizer settings, music source folders, and preferences such as theme and language.</li>
+    <li>This data never leaves your phone unless you export it yourself (see "Sync and backup"). The app opts out of Android's automatic cloud backup, so it is not copied to your Google account. <strong>Uninstalling the app or clearing its storage erases it</strong>; your music files are not affected.</li>
+  </ul>
+
+  <h2>Your music files</h2>
+  <ul>
+    <li>The app reads your audio files to play them and to show their tags, lyrics and album art.</li>
+    <li>It changes a file only when you edit its info (title, artist, album, cover, lyrics…) in "Edit info" and save. On Android 11 and later, Android itself asks you to allow each change; the app writes only to the files you approved.</li>
+  </ul>
+
+  <h2>Sync and backup (optional)</h2>
+  <ul>
+    <li><strong>Sync between devices</strong> is off until you turn it on. When you do, you pick a file with Android's own file picker, for example in Google Drive, OneDrive or Dropbox. The app then reads and writes that one file. It contains your playlists (song titles and artists), favorites, play counts and a random device ID created by the app (used to merge counts from several phones). It contains no music, no file paths and nothing that identifies you.</li>
+    <li>The file is uploaded and stored by the storage service you chose (its app does the uploading, not Wavecrate) under that service's own terms and privacy policy. Anyone you share that file with can read it. You can stop syncing at any time in Settings › Backup &amp; sync and delete the file in that service.</li>
+    <li><strong>Backup and restore</strong> write or read a similar file at a place you pick, only when you tap the button.</li>
+    <li>Exporting a playlist creates a <code>.m3u8</code> file (song titles, artists and file paths) at a place you pick.</li>
+  </ul>
+
+  <h2>Android permissions</h2>
+  <div class="table">
+    <table>
+      <thead><tr><th>Permission</th><th>Why</th></tr></thead>
+      <tbody>
+        <tr><td><code>READ_MEDIA_AUDIO</code> (Android 13+), <code>READ_EXTERNAL_STORAGE</code> (Android 12 and older)</td><td>Find and play the music on your phone. The app asks before using it.</td></tr>
+        <tr><td><code>WRITE_EXTERNAL_STORAGE</code> (Android 10 and older only)</td><td>Save the song info you edit back into the music file.</td></tr>
+        <tr><td><code>FOREGROUND_SERVICE</code>, <code>FOREGROUND_SERVICE_MEDIA_PLAYBACK</code>, <code>WAKE_LOCK</code></td><td>Keep the music playing when the screen is off or you switch apps, with controls in the notification and on the lock screen.</td></tr>
+        <tr><td><code>POST_NOTIFICATIONS</code></td><td>Show the playback controls notification. The app sends no other notifications.</td></tr>
+        <tr><td><code>MODIFY_AUDIO_SETTINGS</code></td><td>Apply the equalizer, bass boost, virtualizer and loudness effects to the music you play.</td></tr>
+        <tr><td><code>ACCESS_NETWORK_STATE</code></td><td>Declared by the audio playback library to check connection status. The app has no internet permission and sends nothing.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>The app asks for no location, contacts, camera, microphone or phone permission.</p>
+
+  <h2>What we do not do</h2>
+  <ul>
+    <li>No account or sign-in, no ads, no analytics, no crash reporting, no third-party tracking SDKs.</li>
+    <li>We run no servers and receive no data from the app, so we cannot see your music, playlists or listening habits.</li>
+    <li>We do not sell, share or rent personal information. The app sells nothing.</li>
+  </ul>
+
+  <h2 id="delete-data">Your rights and deleting your data</h2>
+  <ul>
+    <li>All data is on your phone and under your control. To delete it, uninstall the app or open Android Settings › Apps › Wavecrate › Storage › Clear storage. Delete any sync or backup file you created in the place where you saved it.</li>
+    <li>Because we hold no data about you, there is nothing for us to access, correct or delete on our side. You can still email <a href="mailto:taninteractive.dev@gmail.com?subject=Wavecrate%20privacy">taninteractive.dev@gmail.com</a> with any question; we answer within 30 days.</li>
+  </ul>
+
+  <h2>Children</h2>
+  <p>Wavecrate is a general-purpose music player and is not directed at children under 13. It collects no personal information from anyone, including children.</p>
+
+  <h2>Changes to this policy</h2>
+  <p>If the app ever starts handling data differently (for example by adding an online feature), we will update this page and its "Last updated" date before releasing that version.</p>
+
+  <h2>Contact</h2>
+  <p>Tan Interactive · <a href="mailto:taninteractive.dev@gmail.com">taninteractive.dev@gmail.com</a> · <a href="https://taninteractive.github.io">taninteractive.github.io</a></p>
+</main>
+</body>
+</html>
