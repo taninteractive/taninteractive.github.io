@@ -4,7 +4,8 @@
   Publish as https://taninteractive.github.io/blotsling/privacy-policy.html (APP_CONFIG.privacyUrl in
   src/config/appConfig.ts; the same URL goes into Play Console and the AdMob privacy messages).
   Keep in sync with the Data safety answers in docs/STORE-LISTING.md, src/meta/adPolicy.ts (ad rules and
-  daily caps), src/services/CrossPromo.ts ("More games"), src/meta/chests.ts (drop rates, pity), src/meta/skus.ts (products) and the merged manifest.
+  daily caps), src/services/CrossPromo.ts ("More games"), src/services/PlayGamesService.ts (Google Play Games: cloud save,
+  leaderboards), src/meta/chests.ts (drop rates, pity), src/meta/skus.ts (products) and the merged manifest.
 -->
 <html lang="en">
 <head>
@@ -31,14 +32,14 @@
 <body>
 <main>
   <h1>Blotsling: Fling the Legion — Privacy Policy</h1>
-  <p class="muted">Tan Interactive · Updated 22 October 2026 (first effective 13 October 2026) · App id <code>com.taninteractive.blotsling</code></p>
+  <p class="muted">Tan Interactive · Updated 14 November 2026 (first effective 13 October 2026) · App id <code>com.taninteractive.blotsling</code></p>
 
   <p>Blotsling is a game for players aged 13 and over. It is not directed at children under 13. This page explains what data the game and the Google services it uses handle, why, and the choices you have.</p>
 
   <h2>What the game itself collects</h2>
   <ul>
-    <li>No account, no login, no names, no chat, no free-text input, no contacts, photos, microphone, camera or precise location.</li>
-    <li>Your progress (leaves won, stars, the Scrivener's Kit, Inkdrops, Gilt Seals, Nib Shards, Daily Orders, Muster Week, settings) is saved only on your device. Uninstalling the game or clearing its storage erases it. One-time purchases can be restored from Google Play (Settings → Restore purchases).</li>
+    <li>No account of our own, no names, no chat, no free-text input, no contacts, photos, microphone, camera or precise location. Signing in to Google Play Games is optional (see below).</li>
+    <li>Your progress (leaves won, stars, the Scrivener's Kit, Inkdrops, Gilt Seals, Nib Shards, Daily Orders, Muster Week, settings) is saved on your device. If you sign in to Google Play Games, a copy is also kept in your Google Play Games account. Without that sign-in, uninstalling the game or clearing its storage erases it. One-time purchases can be restored from Google Play (Settings → Restore purchases).</li>
     <li>We run no servers of our own and keep no database about players.</li>
   </ul>
 
@@ -49,6 +50,15 @@
     <li>Analytics event data is kept for at most 14 months.</li>
     <li><strong>Firebase Remote Config</strong> downloads game settings (for example how often ads may appear, daily caps and reward sizes) so we can tune the game without an update. It never changes the rules of a level.</li>
     <li>Crash reports, if any, come from Android itself (Android vitals in Google Play), under Google's policies.</li>
+  </ul>
+
+  <h2>Google Play Games (optional, Google Play version only)</h2>
+  <ul>
+    <li>If you are signed in to Google Play Games on your phone, the game uses it automatically; otherwise you can sign in from Settings, the leaderboard screen or the shop. The game plays fully without it, and the Amazon Appstore version does not use it at all.</li>
+    <li><strong>Cloud save:</strong> a copy of your game progress is stored in your Google Play Games account (Saved Games), so it comes back on a new phone or after reinstalling. It is the same data as the save on your device (progress, the Scrivener's Kit, in-game currencies, and the list of purchases delivered with what each one gave, so a purchase is never lost or counted twice), plus the time it was saved and a random number that tells your devices apart. Your device's settings (sound, language, text size) stay on the device.</li>
+    <li><strong>Leaderboards:</strong> your best Bastion Siege score and your total campaign stars are sent to Google Play Games leaderboards. The game's leaderboard screen shows other players' Play Games names, avatars and scores, as Google provides them; players who hide their game activity in Play Games are not listed. The game keeps the last page it showed on your device so it can show it offline. The "village rivals" on that screen are characters of the game with fixed scores, not players.</li>
+    <li><strong>Deleting it:</strong> Settings → Google Play Games → "Delete cloud progress" deletes the cloud copy and stops saving to the cloud on that device (you can turn it back on there). You can also delete the game's data from your Google Play Games account in the Play Games app or Google's account settings, and hide your game activity or leave leaderboards in the Play Games settings.</li>
+    <li>This data is handled by Google under the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>. We cannot see your Google account and keep no copy of it.</li>
   </ul>
 
   <h2>More games</h2>
@@ -88,6 +98,7 @@
         <tr><td>Internet or other electronic activity</td><td>Game events, ad views and taps</td><td>Google (Firebase, AdMob)</td></tr>
         <tr><td>Approximate geolocation</td><td>Country or region from the IP address</td><td>Google (Firebase, AdMob)</td></tr>
         <tr><td>Commercial information</td><td>Purchase history</td><td>Google Play</td></tr>
+        <tr><td>Game progress and scores (only if you sign in to Play Games)</td><td>Cloud save, leaderboard scores, Play Games name and avatar</td><td>Google (Play Games)</td></tr>
       </tbody>
     </table>
   </div>
@@ -96,6 +107,7 @@
   <h2>Your rights and data deletion</h2>
   <ul>
     <li>Data on your device: uninstall the game or clear its storage.</li>
+    <li>Cloud save and leaderboard scores (Google Play Games): Settings → Google Play Games → "Delete cloud progress", or delete the game's data in your Google Play Games settings (see above).</li>
     <li>Analytics data is tied to an app-instance ID, not to you; reinstalling the game creates a new one. To ask about or delete data linked to your installation, write to us and we will help through Google's tools.</li>
     <li>If you are in the EEA, the UK or Switzerland you may also complain to your data protection authority.</li>
   </ul>
