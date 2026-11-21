@@ -42,18 +42,18 @@
 <body>
 <main>
   <h1>Gushback — Privacy Policy</h1>
-  <p class="muted">Tan Interactive · Effective date: 25 October 2026 · Last updated: 25 October 2026 · App id <code>com.taninteractive.gushback</code></p>
+  <p class="muted">Tan Interactive · Effective date: 25 October 2026 · Last updated: 20 November 2026 · App id <code>com.taninteractive.gushback</code></p>
 
   <p>Gushback ("the game") is made by Tan Interactive, a small independent game studio ("we", "us"). You can reach us at <a href="mailto:taninteractive.dev@gmail.com">taninteractive.dev@gmail.com</a> or <a href="https://taninteractive.github.io">taninteractive.github.io</a>. The game is meant for players aged 13 and over and is not directed at children under 13. This page explains what data the game and the Google services inside it handle, why, and the choices you have.</p>
 
   <div class="summary">
-    <p><strong>In short:</strong> no account, no sign-in, no chat and nothing you type is collected. Your progress is saved only on your phone; we run no servers and keep no player database. Google Firebase counts game events without names or email and sends game settings. Google AdMob shows rewarded ads you choose to watch and an occasional full-screen ad after a won level, after asking for your consent where the law requires it. The game does not request the Android Advertising ID permission and never asks for your location. We do not sell your personal information. The game sells nothing for real money.</p>
+    <p><strong>In short:</strong> no account of our own, no chat and nothing you type is collected. Your progress is saved on your phone; if you choose to sign in to Google Play Games (optional, Google Play version only), a copy of it is also kept in your Google Play Games account. We run no servers and keep no player database. Google Firebase counts game events without names or email and sends game settings. Google AdMob shows rewarded ads you choose to watch and an occasional full-screen ad after a won level, after asking for your consent where the law requires it. The game does not request the Android Advertising ID permission and never asks for your location. We do not sell your personal information. The game sells nothing for real money.</p>
   </div>
 
   <h2>Data saved on your phone</h2>
   <ul>
     <li>Your progress (stars per level, Rosettes, the pets you own and use, the costumes you have met, whether you finished the tutorial) and your settings (sound) are kept in the app's own storage on your phone (browser storage inside the app, keys starting with <code>gushback_</code>), together with counters the ad rules need (how many ads were shown today, when the last one was shown).</li>
-    <li>There is no account and no cloud save, and we never receive this data. If you have turned on Android's own device backup, Android may include it in your Google backup under Google's terms. <strong>Uninstalling the game or clearing its storage erases it.</strong></li>
+    <li>The game has no account of our own, and we never receive this data. In the Google Play version you may sign in to Google Play Games, which keeps a copy of your progress in your Google account (see "Google Play Games" below); the Amazon version has no cloud copy. If you have turned on Android's own device backup, Android may include it in your Google backup under Google's terms. <strong>Without a Google Play Games cloud copy, uninstalling the game or clearing its storage erases it.</strong></li>
   </ul>
 
   <h2>Analytics and remote settings (Google Firebase)</h2>
@@ -62,6 +62,14 @@
     <li>Firebase sends these events with a random app-instance ID and basic device information (model, Android version, app version, language, country or region derived from the IP address). The Android Advertising ID is not collected (the permission is removed from the app), and Analytics is told not to use the data for advertising (ad personalisation and ad user data signals are off).</li>
     <li>Firebase Remote Config downloads game settings (for example how often a full-screen ad may appear) so we can tune them without an update.</li>
     <li>If the game crashes or a script error happens, an anonymous error event (where it happened, its type) is counted like any other event.</li>
+  </ul>
+
+  <h2 id="play-games">Google Play Games (optional, Google Play version only)</h2>
+  <ul>
+    <li>If you are signed in to Google Play Games, the game uses it automatically; otherwise you can sign in from Settings. The game plays fully without it. The Amazon Appstore version has none of this.</li>
+    <li><strong>Cloud save:</strong> a copy of your game progress (levels, stars, Rosettes, items and records, plus the time it was saved; sound and language settings stay on each phone) is stored in your Google Play Games account (Saved Games), so it comes back on a new phone or after reinstalling. It holds no personal information entered by you, because the game asks you to type nothing. In Settings, "Delete cloud progress" deletes that copy and stops saving to the cloud on that phone; the save on your phone stays.</li>
+    <li><strong>Leaderboards:</strong> your best Endless distance, your campaign stars and your Daily Challenge score are sent to Google Play Games leaderboards, shown with your Play Games profile name and avatar according to your Play Games settings (you can hide your profile there).</li>
+    <li>This data is handled by Google under the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>. We cannot see your Google account and keep no copy of this data. You can also remove it from the Google Play Games app (Settings › Delete Play Games account &amp; data) or through your Google account.</li>
   </ul>
 
   <h2 id="more-games">More games</h2>
@@ -98,7 +106,7 @@
 
   <h2>Who receives data</h2>
   <ul>
-    <li>Google (Firebase Analytics, Firebase Remote Config, AdMob and its ad partners where you allow it). Google acts under its own policies: <a href="https://policies.google.com/privacy">Google Privacy Policy</a> · <a href="https://firebase.google.com/support/privacy">Privacy and security in Firebase</a> · <a href="https://support.google.com/admob/answer/6128543">AdMob and user privacy</a> · <a href="https://policies.google.com/technologies/partner-sites">How Google uses information from sites or apps that use its services</a>.</li>
+    <li>Google (Firebase Analytics, Firebase Remote Config, AdMob and its ad partners where you allow it, and Google Play Games if you sign in). Google acts under its own policies: <a href="https://policies.google.com/privacy">Google Privacy Policy</a> · <a href="https://firebase.google.com/support/privacy">Privacy and security in Firebase</a> · <a href="https://support.google.com/admob/answer/6128543">AdMob and user privacy</a> · <a href="https://policies.google.com/technologies/partner-sites">How Google uses information from sites or apps that use its services</a>.</li>
     <li>We, Tan Interactive, only see aggregated reports and event data in the Firebase and AdMob consoles. We do not sell personal information and receive no payment details.</li>
     <li>Data sent to Google is encrypted in transit (HTTPS) and may be processed on servers outside your country, including in the United States.</li>
   </ul>
@@ -119,6 +127,7 @@
   <h2 id="delete-data">Your rights, data retention and deletion</h2>
   <ul>
     <li><strong>Data on your phone:</strong> uninstall the game, or open Android Settings › Apps › Gushback › Storage › Clear storage (Clear data on some phones). This deletes your save and settings at once.</li>
+    <li><strong>Google Play Games cloud copy and leaderboard entries:</strong> in the game, Settings › "Delete cloud progress" (removes the cloud copy); or use the Google Play Games app or your Google account to delete your Play Games data and leaderboard entries.</li>
     <li><strong>Analytics data</strong> is tied to a random app-instance ID, not to your name or email. We have no account to look you up by. Reinstalling the game or clearing its storage creates a new ID, and the old data is no longer linked to your phone. Google Analytics deletes event data automatically after the retention period we set (up to 14 months).</li>
     <li><strong>To ask about or delete data</strong>, email <a href="mailto:taninteractive.dev@gmail.com?subject=Gushback%20data%20request">taninteractive.dev@gmail.com</a> with the subject "Gushback data request". We will answer within 30 days and delete whatever we can link to your installation using Google's deletion tools. Because we keep no names or accounts, we may be unable to identify data that belongs to you; in that case clearing the game's storage is the quickest way to cut the link.</li>
     <li><strong>Ad data</strong> is held by Google under its policies; you can manage it through your Google account, <a href="https://adssettings.google.com">adssettings.google.com</a>, Android's ad settings and Settings › Ad privacy choices in the game.</li>
