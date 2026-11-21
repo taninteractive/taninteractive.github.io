@@ -1,6 +1,6 @@
 {
-  "version": 6,
-  "updated": "2026-10-29",
+  "version": 7,
+  "updated": "2026-11-21",
   "enabled": true,
   "placements": {
     "menu": true,
@@ -204,7 +204,7 @@
       "stores": {
         "google": {
           "package": "com.taninteractive.bentosnap",
-          "live": false
+          "live": true
         }
       },
       "weight": 1
