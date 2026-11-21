@@ -1,5 +1,5 @@
 {
-  "version": 8,
+  "version": 9,
   "updated": "2026-11-21",
   "enabled": true,
   "placements": {
@@ -203,6 +203,10 @@
       "icon": "bentosnap/icon-192.png",
       "stores": {
         "google": {
+          "package": "com.taninteractive.bentosnap",
+          "live": true
+        },
+        "amazon": {
           "package": "com.taninteractive.bentosnap",
           "live": true
         }
