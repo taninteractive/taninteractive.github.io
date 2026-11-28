@@ -1,6 +1,6 @@
 {
-  "version": 10,
-  "updated": "2026-11-27",
+  "version": 11,
+  "updated": "2026-11-28",
   "enabled": true,
   "placements": {
     "menu": true,
@@ -260,36 +260,6 @@
       "stores": {
         "google": {
           "package": "com.taninteractive.dunepup",
-          "live": false
-        }
-      },
-      "weight": 1
-    },
-    {
-      "id": "slashbistro",
-      "name": {
-        "en": "Slashbistro: Slice the Orders"
-      },
-      "tagline": {
-        "en": "Swipe to slice, halve and mince flying food to order",
-        "vi": "Vuốt cắt lát, bổ đôi, băm đồ ăn bay và phục vụ kịp giờ",
-        "es": "Desliza para cortar comida al vuelo y servir cada pedido",
-        "pt": "Deslize para cortar comida no ar e servir cada pedido",
-        "fr": "Glisse pour couper les aliments en vol et servir à temps",
-        "de": "Wische, schneide fliegendes Essen und serviere rechtzeitig",
-        "ru": "Режь летающую еду свайпом и подавай заказы вовремя",
-        "ja": "飛ぶ食材をスワイプで切って注文どおりに提供！",
-        "ko": "날아오는 재료를 스와이프로 썰어 주문대로 서빙해요",
-        "ar": "اسحب لتقطيع الطعام الطائر وتقديم الطلبات في الوقت المناسب"
-      },
-      "icon": "slashbistro/icon-192.png",
-      "stores": {
-        "google": {
-          "package": "com.taninteractive.slashbistro",
-          "live": false
-        },
-        "amazon": {
-          "package": "com.taninteractive.slashbistro",
           "live": false
         }
       },
